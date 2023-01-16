@@ -168,18 +168,4 @@
 	.page-links *:hover:after {
 		width: 100%;
 	}
-
-	.contact {
-		background-color: #080a68;
-		color: #fff;
-		padding: 12px 14px;
-		border-radius: 4px;
-		transition: 0.5s;
-	}
-	.contact:hover {
-		opacity: 0.7;
-	}
-	.contact::after {
-		width: 0 !important;
-	}
 </style>
