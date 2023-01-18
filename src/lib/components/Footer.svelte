@@ -7,26 +7,52 @@
 	import IASSchool from '../assets/logos/IAS Logo.png';
 	import IASMun from '../assets/logos/IASMUN.png';
 	import Saos from 'saos';
+
+	let slide_left = 'slide-left 1.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both';
+	let slide_right = 'slide-right 1.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both';
 </script>
 
 <footer>
 	<div class="socials">
-		<a href="/">
-			<img class="youtube-logo" src={YoutubeLogo} alt="YouTube" />
+		<Saos once={true} animation={slide_right}>
+			<a href="/">
+				<img class="youtube-logo" src={YoutubeLogo} alt="YouTube" />
+			</a>
+		</Saos>
+
+		<Saos once={true} animation={slide_left}>
 			<p>IASMUN</p>
-		</a>
-		<a href="/" class="instagram">
-			<img src={InstagramLogo} alt="Instagram" />
+		</Saos>
+
+		<Saos once={true} animation={slide_right}>
+			<a href="/" class="instagram">
+				<img src={InstagramLogo} alt="Instagram" />
+			</a>
+		</Saos>
+
+		<Saos once={true} animation={slide_left}>
 			<p>@IASMUN</p>
-		</a>
-		<a href="/">
-			<img class="facebook-logo" src={FacebookLogo} alt="Facebook" />
+		</Saos>
+
+		<Saos once={true} animation={slide_right}>
+			<a href="/">
+				<img class="facebook-logo" src={FacebookLogo} alt="Facebook" />
+			</a>
+		</Saos>
+
+		<Saos once={true} animation={slide_left}>
 			<p>IASMUN</p>
-		</a>
-		<a href="/">
-			<img class="twitter-logo" src={TwitterLogo} alt="Twitter" />
+		</Saos>
+
+		<Saos once={true} animation={slide_right}>
+			<a href="/">
+				<img class="twitter-logo" src={TwitterLogo} alt="Twitter" />
+			</a>
+		</Saos>
+
+		<Saos once={true} animation={slide_left}>
 			<p>@IASMUN</p>
-		</a>
+		</Saos>
 	</div>
 
 	<div class="images">
@@ -66,15 +92,10 @@
 		text-decoration: none;
 	}
 	.socials {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-	.socials > * {
-		display: flex;
-		flex-direction: row;
+		display: grid;
+		grid-template-columns: 50px 1fr;
 		align-items: center;
-		gap: 18px;
+		justify-content: center;
 	}
 	.instagram {
 		margin-left: 4px;
@@ -102,5 +123,27 @@
 	}
 	footer p {
 		align-self: flex-end;
+	}
+
+	@keyframes -global-slide-right {
+		0% {
+			-webkit-transform: translateX(-100px);
+			transform: translateX(-100px);
+		}
+		100% {
+			-webkit-transform: translateX(0);
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes -global-slide-left {
+		0% {
+			-webkit-transform: translateX(100px);
+			transform: translateX(100px);
+		}
+		100% {
+			-webkit-transform: translateX(0);
+			transform: translateX(0);
+		}
 	}
 </style>

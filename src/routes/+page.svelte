@@ -94,11 +94,11 @@
 </div>
 
 <div class="executive-board">
-	<Saos once={true} animation="slide-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;">
+	<Saos once={true} animation="slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;">
 		<h1>Meet Our <br /> <b>Executive Board</b></h1>
 	</Saos>
 
-	<Saos once={true} animation="slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;">
+	<Saos once={true} animation="slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;">
 		<div class="board">
 			<div class="container sg">
 				<div class="img" />
@@ -175,6 +175,7 @@
 		height: 300px;
 		display: grid;
 		place-items: center;
+		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.8);
 		color: #fff;
 		font-family: 'Rubik', sans-serif;
 	}

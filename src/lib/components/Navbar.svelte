@@ -8,6 +8,7 @@
 	import { onMount } from 'svelte';
 
 	let ready = false;
+
 	onMount(() => (ready = true));
 
 	import { page } from '$app/stores';
@@ -20,9 +21,9 @@
 				<a href="/"><img class="twitter-logo-img" src={TwitterLogo} alt="twitter" /></a>
 				<a href="/"><img class="facebook-logo-img" src={FacebookLogo} alt="facebook" /></a>
 				<a href="/"><img src={InstagramLogo} alt="instagram" /></a>
-				<a class="youtube-logo" href="/"
-					><img class="youtube-logo-img" src={YoutubeLogo} alt="youtube" /></a
-				>
+				<a class="youtube-logo" href="/">
+					<img class="youtube-logo-img" src={YoutubeLogo} alt="youtube" />
+				</a>
 			</div>
 
 			<div class="text" in:fly={{ x: -100, duration: 1500 }}>
