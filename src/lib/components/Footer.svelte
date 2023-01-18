@@ -146,4 +146,31 @@
 			transform: translateX(0);
 		}
 	}
+
+	@media screen and (max-width: 1000px) {
+		.IASMUN {
+			width: 120px;
+		}
+		.IAS {
+			width: 200px;
+		}
+	}
+
+	@media screen and (max-width: 750px) {
+		.IASMUN {
+			width: 100px;
+		}
+		.IAS {
+			width: 140px;
+		}
+	}
+
+	@media screen and (max-width: 660px) {
+		.IASMUN {
+			display: none;
+		}
+		.IAS {
+			display: none;
+		}
+	}
 </style>

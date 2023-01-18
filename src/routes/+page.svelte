@@ -8,13 +8,23 @@
 	import Saos from 'saos';
 
 	let ready = false;
-	onMount(() => (ready = true));
+	onMount(() => {
+		ready = true;
+		width = window.innerWidth;
+	});
+
+	let width: number;
+
+	const sg_letter =
+		'Dear venerable delegates, advisors, and organizers,<br /><br />I am delighted to welcome you to International Academic School Model United Nations(IASMUN) 2023, our first annual conference at International Academic School. It is an honor to be the Secretary-General of IASMUN 2023!<br /><br />IASMUN has been initiated for all students across the region for diversity, competitiveness, and the concoction of creative ideas. IASMUN will commence with four distinct committees for the delegates to choose between based on their interest and level. IASMUN possesses a superior set of members with various perks and a remarkable skill set. IASMUN grants students the opportunity to enhance their research and debating skills, confidence, extemporization, and writing and speaking abilities through a variety of committees and issues. It provides all its participants to display their inner talents and flourish them. Furthermore, IASMUN fundamentally prepares its participants for university and the future as a whole.<br /><br />We highly encourage you to participate in an enlightening, pleasurable, and memorable occasion that will remarkably transfigure and inspire everyone. IASMUN strives for reinforcing and developing all required skills that create an exceptional ambassador!<br /><br />Best regards,<br /><br />Youssef Ashraf Hussein Zaki';
 </script>
+
+<svelte:window bind:innerWidth={width} />
 
 <div class="intro">
 	<img class="IAS-pic" src={IASSchool} alt="IAS School" />
 	{#if ready}
-		<img in:fly={{ y: 200, duration: 1800 }} class="IASMUN-pic" src={IASMun} alt="IASMUN" />
+		<img in:fly={{ y: 300, duration: 1800 }} class="IASMUN-pic" src={IASMun} alt="IASMUN" />
 	{/if}
 </div>
 
@@ -39,45 +49,52 @@
 </div>
 
 <div class="letters">
-	<Saos once={true} animation="slide-right 1.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both">
-		<div class="container sg" in:fly={{ x: -1000, duration: 1600 }}>
+	{#if width >= 1220}
+		<Saos once={true} animation={'slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both'}>
+			<div class="container sg">
+				<h1>Secretary General's<br /><b>Welcome</b></h1>
+
+				<div class="content">
+					<p>
+						{@html sg_letter}
+					</p>
+
+					<div class="img" />
+				</div>
+			</div>
+		</Saos>
+	{:else}
+		<div class="container sg">
 			<h1>Secretary General's<br /><b>Welcome</b></h1>
 
 			<div class="content">
 				<p>
-					Dear venerable delegates, advisors, and organizers,<br /><br />
-
-					I am delighted to welcome you to International Academic School Model United Nations
-					(IASMUN) 2023, our first annual conference at International Academic School. It is an
-					honor to be the Secretary-General of IASMUN 2023!<br /><br />
-
-					IASMUN has been initiated for all students across the region for diversity,
-					competitiveness, and the concoction of creative ideas. IASMUN will commence with four
-					distinct committees for the delegates to choose between based on their interest and level.
-					IASMUN possesses a superior set of members with various perks and a remarkable skill set.
-					IASMUN grants students the opportunity to enhance their research and debating skills,
-					confidence, extemporization, and writing and speaking abilities through a variety of
-					committees and issues. It provides all its participants to display their inner talents and
-					flourish them. Furthermore, IASMUN fundamentally prepares its participants for university
-					and the future as a whole.<br /><br />
-
-					We highly encourage you to participate in an enlightening, pleasurable, and memorable
-					occasion that will remarkably transfigure and inspire everyone. IASMUN strives for
-					reinforcing and developing all required skills that create an exceptional ambassador!
-					<br /><br />
-
-					Best regards, <br /><br />
-
-					Youssef Ashraf Hussein Zaki
+					{@html sg_letter}
 				</p>
 
 				<div class="img" />
 			</div>
 		</div>
-	</Saos>
+	{/if}
 
-	<Saos once={true} animation="slide-left 1.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both">
-		<div class="container ca" in:fly={{ x: 1000, duration: 1600 }}>
+	{#if width >= 1220}
+		<Saos once={true} animation="slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both">
+			<div class="container ca">
+				<h1><b>Chief Advisor</b></h1>
+
+				<div class="content">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare accumsan neque eu
+						aliquam. Maecenas magna nibh, pulvinar ut risus et, tempor gravida nunc. Vestibulum a
+						nisl sit amet massa ultricies malesuada vel et lacus.
+					</p>
+
+					<div class="img" />
+				</div>
+			</div>
+		</Saos>
+	{:else}
+		<div class="container ca">
 			<h1><b>Chief Advisor</b></h1>
 
 			<div class="content">
@@ -90,15 +107,15 @@
 				<div class="img" />
 			</div>
 		</div>
-	</Saos>
+	{/if}
 </div>
 
 <div class="executive-board">
-	<Saos once={true} animation="slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;">
+	<Saos once={true} animation="slide-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;">
 		<h1>Meet Our <br /> <b>Executive Board</b></h1>
 	</Saos>
 
-	<Saos once={true} animation="slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;">
+	<Saos once={true} animation="slide-top 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;">
 		<div class="board">
 			<div class="container sg">
 				<div class="img" />
@@ -152,6 +169,7 @@
 		place-items: center;
 	}
 	.IAS-pic {
+		min-width: 100%;
 		height: calc(100vh - 85px);
 		-webkit-filter: blur(60%);
 		filter: blur(60%);
@@ -192,12 +210,6 @@
 		background-color: #1f4e60;
 	}
 
-	@media screen and (max-width: 620px) {
-		.hero > * {
-			width: calc(100% - 20px);
-		}
-	}
-
 	.letters {
 		margin-top: 18px;
 		display: grid;
@@ -219,7 +231,7 @@
 	.letters .sg p {
 		font-size: 20px;
 	}
-	.letters .sg h1 {
+	.letters h1 {
 		margin-bottom: 24px;
 	}
 	.content {
@@ -262,7 +274,8 @@
 
 	.board {
 		display: grid;
-		grid-template-columns: repeat(4, 220px);
+		grid-template-columns: repeat(4, 1fr);
+		gap: 48px;
 	}
 	.board .sg {
 		grid-area: 1 / 1 / span 1 / span 4;
@@ -341,6 +354,46 @@
 		100% {
 			-webkit-transform: scale(1);
 			transform: scale(1);
+		}
+	}
+
+	@media screen and (max-width: 620px) {
+		.theme,
+		.vision {
+			width: calc(100vw - 20px) !important;
+		}
+	}
+
+	@media screen and (max-width: 1220px) {
+		.letters .container {
+			width: calc(100% - 20px);
+			height: auto;
+		}
+	}
+
+	@media screen and (max-width: 1100px) {
+		.content {
+			flex-direction: column !important;
+			gap: 48px;
+		}
+		.content .img {
+			width: 350px;
+			height: 320px;
+			background-color: #326198;
+			flex: auto;
+		}
+		.content p {
+			flex: auto;
+		}
+	}
+
+	@media screen and (max-width: 750px) {
+		.board {
+			grid-template-columns: repeat(2, 1fr) !important;
+			gap: 24px;
+		}
+		.board .sg {
+			grid-area: 1 / 1 / span 1 / span 2;
 		}
 	}
 </style>

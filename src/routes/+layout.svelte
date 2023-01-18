@@ -13,6 +13,7 @@
 
 <style>
 	.main {
+		height: 100%;
 		padding-top: 85px;
 	}
 </style>
