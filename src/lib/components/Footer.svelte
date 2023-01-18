@@ -6,6 +6,7 @@
 
 	import IASSchool from '../assets/logos/IAS Logo.png';
 	import IASMun from '../assets/logos/IASMUN.png';
+	import Saos from 'saos';
 </script>
 
 <footer>
@@ -29,8 +30,19 @@
 	</div>
 
 	<div class="images">
-		<img class="IASMUN" alt="IASMUN" src={IASMun} />
-		<img class="IAS" alt="IAS" src={IASSchool} />
+		<Saos
+			once={true}
+			animation="scale-up-center 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both"
+		>
+			<img class="IASMUN" alt="IASMUN" src={IASMun} />
+		</Saos>
+
+		<Saos
+			once={true}
+			animation="scale-up-center 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both"
+		>
+			<img class="IAS" alt="IAS" src={IASSchool} />
+		</Saos>
 	</div>
 
 	<p>&#169; IASMUN {new Date().getFullYear()}</p>
