@@ -115,7 +115,7 @@
 		<h1>Meet Our <br /> <b>Executive Board</b></h1>
 	</Saos>
 
-	<Saos once={true} animation="slide-top 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;">
+	<Saos once={true} animation="slide-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both">
 		<div class="board">
 			<div class="container sg">
 				<div class="img" />
@@ -305,8 +305,8 @@
 
 	@keyframes -global-slide-bottom {
 		0% {
-			-webkit-transform: translateY(-800px);
-			transform: translateY(-800px);
+			-webkit-transform: translateY(-400px);
+			transform: translateY(-400px);
 		}
 		100% {
 			-webkit-transform: translateY(0);
@@ -316,8 +316,8 @@
 
 	@keyframes -global-slide-top {
 		0% {
-			-webkit-transform: translateY(800px);
-			transform: translateY(800px);
+			-webkit-transform: translateY(400px);
+			transform: translateY(400px);
 		}
 		100% {
 			-webkit-transform: translateY(0);
