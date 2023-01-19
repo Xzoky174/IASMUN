@@ -10,16 +10,19 @@
 	let footer: any;
 	let footer_intersecting = false;
 
-	let change_top_btn = false;
+	let hide_top_btn = false;
 
 	$: {
-		change_top_btn = footer_intersecting;
+		hide_top_btn = footer_intersecting;
 	}
 
 	let scrollY: number;
 
 	const scroll = (e: any) => {
 		show_top_btn = e.view.scrollY > 120;
+	};
+	const resetScroll = () => {
+		scrollY = 0;
 	};
 </script>
 
@@ -31,13 +34,13 @@
 	<slot />
 </div>
 
-{#if show_top_btn}
-	<Top onClick={() => (scrollY = 0)} changeBtn={change_top_btn} />
+{#if show_top_btn && !hide_top_btn}
+	<Top onClick={resetScroll} />
 {/if}
 
 <IntersectionObserver element={footer} bind:intersecting={footer_intersecting}>
 	<div bind:this={footer}>
-		<Footer />
+		<Footer onTopClick={resetScroll} />
 	</div>
 </IntersectionObserver>
 

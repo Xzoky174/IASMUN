@@ -10,6 +10,8 @@
 
 	let slide_left = 'slide-left 1.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both';
 	let slide_right = 'slide-right 1.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both';
+
+	export let onTopClick: any;
 </script>
 
 <footer>
@@ -72,12 +74,27 @@
 	</div>
 
 	<p>&#169; IASMUN {new Date().getFullYear()}</p>
+
+	<!-- svelte-ignore a11y-click-events-have-key-events -->
+	<svg
+		on:click={onTopClick}
+		class="top"
+		width="45"
+		height="45"
+		viewBox="0 0 301 183"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+	>
+		<path class="outline" d="M13.3824 158.477L165.929 14" stroke="black" stroke-width="37" />
+		<path class="outline" d="M287 170L140 14" stroke="black" stroke-width="37" />
+	</svg>
 </footer>
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 	footer {
+		position: relative;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -123,6 +140,19 @@
 	}
 	footer p {
 		align-self: flex-end;
+	}
+	.top {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
+		background-color: #fff;
+		border-radius: 100%;
+		padding: 8px 8px;
+		transition: 0.55s;
+	}
+	.top:hover {
+		transform: translateY(-10px);
 	}
 
 	@keyframes -global-slide-right {
