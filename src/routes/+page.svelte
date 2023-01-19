@@ -1,9 +1,14 @@
 <script lang="ts">
-	import IASSchool from '../lib/assets/images/School.jpg';
-	import IASMun from '../lib/assets/logos/IASMUN.png';
+	import IASSchool from '$lib/assets/images/School.jpg';
+	import IASMun from '$lib/assets/logos/IASMUN.png';
 
 	import { fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
+
+	import Line1 from '$lib/assets/lines/Vector 1.svg';
+	import Line2 from '$lib/assets/lines/Vector 2.svg';
+	import Line3 from '$lib/assets/lines/Vector 3.svg';
+	import Line4 from '$lib/assets/lines/Vector 4.svg';
 
 	import Saos from 'saos';
 
@@ -145,6 +150,11 @@
 		</div>
 	</Saos>
 </div>
+
+<img class="lines line1" src={Line1} alt="Line" />
+<img class="lines line2" src={Line2} alt="Line" />
+<img class="lines line3" src={Line3} alt="Line" />
+<img class="lines line4" src={Line4} alt="Line" />
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
@@ -301,6 +311,26 @@
 	}
 	.container > p {
 		font-size: 20px;
+	}
+
+	.lines {
+		position: absolute;
+		z-index: -1;
+	}
+	.line1 {
+		left: 0;
+		top: calc(100vh);
+	}
+	.line2 {
+		right: 0;
+		top: calc(100vh - 40px);
+	}
+	.line3 {
+		top: calc(100vh * 3.6);
+	}
+	.line4 {
+		top: calc(100vh * 2.8);
+		right: 0;
 	}
 
 	@keyframes -global-slide-bottom {

@@ -1,11 +1,11 @@
 <script lang="ts">
-	import TwitterLogo from '../assets/logos/Twitter-logo.svg';
-	import FacebookLogo from '../assets/logos/Facebook-logo.svg';
-	import InstagramLogo from '../assets/logos/Instagram-logo.svg';
-	import YoutubeLogo from '../assets/logos/Youtube-logo.svg';
+	import TwitterLogo from '$lib/assets/logos/Twitter-logo.svg';
+	import FacebookLogo from '$lib/assets/logos/Facebook-logo.svg';
+	import InstagramLogo from '$lib/assets/logos/Instagram-logo.svg';
+	import YoutubeLogo from '$lib/assets/logos/Youtube-logo.svg';
 
-	import IASSchool from '../assets/logos/IAS Logo.png';
-	import IASMun from '../assets/logos/IASMUN.png';
+	import IASSchool from '$lib/assets/logos/IAS Logo.png';
+	import IASMun from '$lib/assets/logos/IASMUN.png';
 	import Saos from 'saos';
 
 	let slide_left = 'slide-left 1.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both';

@@ -1,8 +1,8 @@
 <script lang="ts">
-	import TwitterLogo from '../assets/logos/Twitter-logo.svg';
-	import FacebookLogo from '../assets/logos/Facebook-logo.svg';
-	import InstagramLogo from '../assets/logos/Instagram-logo.svg';
-	import YoutubeLogo from '../assets/logos/Youtube-logo.svg';
+	import TwitterLogo from '$lib/assets/logos/Twitter-logo.svg';
+	import FacebookLogo from '$lib/assets/logos/Facebook-logo.svg';
+	import InstagramLogo from '$lib/assets/logos/Instagram-logo.svg';
+	import YoutubeLogo from '$lib/assets/logos/Youtube-logo.svg';
 
 	import { fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
