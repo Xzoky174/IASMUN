@@ -10,6 +10,11 @@
 	import Line3 from '$lib/assets/lines/Vector 3.svg';
 	import Line4 from '$lib/assets/lines/Vector 4.svg';
 
+	import Blob1 from '$lib/assets/blobs/Vector 1.svg';
+	import Blob2 from '$lib/assets/blobs/Vector 2.svg';
+	import Blob3 from '$lib/assets/blobs/Vector 3.svg';
+	import Blob4 from '$lib/assets/blobs/Vector 4.svg';
+
 	import Saos from 'saos';
 
 	let ready = false;
@@ -55,7 +60,7 @@
 
 <div class="letters">
 	{#if width >= 1220}
-		<Saos once={true} animation={'slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both'}>
+		<Saos once={true} animation={'slide-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both'}>
 			<div class="container sg">
 				<h1>Secretary General's<br /><b>Welcome</b></h1>
 
@@ -83,7 +88,7 @@
 	{/if}
 
 	{#if width >= 1220}
-		<Saos once={true} animation="slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both">
+		<Saos once={true} animation="slide-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both">
 			<div class="container ca">
 				<h1><b>Chief Advisor</b></h1>
 
@@ -151,10 +156,15 @@
 	</Saos>
 </div>
 
-<img class="lines line1" src={Line1} alt="Line" />
-<img class="lines line2" src={Line2} alt="Line" />
-<img class="lines line3" src={Line3} alt="Line" />
-<img class="lines line4" src={Line4} alt="Line" />
+<img class="lines line1" src={Line1} alt="" />
+<img class="lines line2" src={Line2} alt="" />
+<img class="lines line3" src={Line3} alt="" />
+<img class="lines line4" src={Line4} alt="" />
+
+<img class="blobs blob1" src={Blob1} alt="" />
+<img class="blobs blob2" src={Blob2} alt="" />
+<img class="blobs blob3" src={Blob3} alt="" />
+<img class="blobs blob4" src={Blob4} alt="" />
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
@@ -313,7 +323,8 @@
 		font-size: 20px;
 	}
 
-	.lines {
+	.lines,
+	.blobs {
 		position: absolute;
 		z-index: -1;
 	}
@@ -331,6 +342,25 @@
 	.line4 {
 		top: calc(100vh * 2.8);
 		right: 0;
+	}
+
+	.blob1 {
+		top: calc(100vh + 500px);
+		left: -60px;
+	}
+	.blob2 {
+		top: calc(100vh + 100px);
+		right: 0;
+		width: 380px;
+	}
+	.blob3 {
+		top: calc(100vh * 3.8);
+		right: 0;
+		width: 360px;
+	}
+	.blob4 {
+		top: calc(100vh * 3.7);
+		width: 400px;
 	}
 
 	@keyframes -global-slide-bottom {

@@ -1,8 +1,8 @@
 <script lang="ts">
-	import TwitterLogo from '$lib/assets/logos/Twitter-logo.svg';
-	import FacebookLogo from '$lib/assets/logos/Facebook-logo.svg';
-	import InstagramLogo from '$lib/assets/logos/Instagram-logo.svg';
-	import YoutubeLogo from '$lib/assets/logos/Youtube-logo.svg';
+	import TwitterLogo from '$lib/assets/logos/socials/Twitter.svg';
+	import FacebookLogo from '$lib/assets/logos/socials/Facebook.svg';
+	import InstagramLogo from '$lib/assets/logos/socials/Instagram.svg';
+	import YoutubeLogo from '$lib/assets/logos/socials/Youtube.svg';
 
 	import { fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
@@ -18,8 +18,8 @@
 	<div class="socials">
 		{#if ready}
 			<div class="links" in:fly={{ y: -200, duration: 1500 }}>
-				<a href="/"><img class="twitter-logo-img" src={TwitterLogo} alt="twitter" /></a>
-				<a href="/"><img class="facebook-logo-img" src={FacebookLogo} alt="facebook" /></a>
+				<a href="/"><img src={TwitterLogo} alt="twitter" /></a>
+				<a href="/"><img src={FacebookLogo} alt="facebook" /></a>
 				<a href="/"><img src={InstagramLogo} alt="instagram" /></a>
 				<a class="youtube-logo" href="/">
 					<img class="youtube-logo-img" src={YoutubeLogo} alt="youtube" />
@@ -112,25 +112,17 @@
 		transition: 0.25s;
 	}
 	.socials .links a:hover {
-		transform: translateY(-4px);
+		transform: translateY(-6px);
 	}
 	.socials .links img {
 		width: 35px;
 		height: 25px;
 	}
 	.youtube-logo-img {
-		height: 35px !important;
+		height: 38px !important;
 	}
 	.youtube-logo {
 		margin-left: 7px;
-	}
-	.facebook-logo-img {
-		width: 30px;
-		height: 25px;
-	}
-	.twitter-logo-img {
-		width: 28px;
-		height: 25px;
 	}
 	.page-links {
 		display: flex;

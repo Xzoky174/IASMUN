@@ -18,8 +18,8 @@
 
 	let scrollY: number;
 
-	const scroll = (e: any) => {
-		show_top_btn = e.view.scrollY > 120;
+	const scroll = () => {
+		show_top_btn = scrollY > 120;
 	};
 	const resetScroll = () => {
 		scrollY = 0;
