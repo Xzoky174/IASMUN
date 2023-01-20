@@ -4,15 +4,34 @@
 	import InstagramLogo from '$lib/assets/logos/socials/Instagram.svg';
 	import YoutubeLogo from '$lib/assets/logos/socials/Youtube.svg';
 
-	import { fly } from 'svelte/transition';
+	import Menu from '$lib/assets/logos/Menu.svg';
+
+	import { page } from '$app/stores';
+
+	import { fade, fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
+
+	let menu: any;
+	let links: any;
+
+	let width: number;
+	let showLinks = false;
 
 	let ready = false;
 
 	onMount(() => (ready = true));
-
-	import { page } from '$app/stores';
 </script>
+
+<svelte:window
+	bind:innerWidth={width}
+	on:click={(e) => {
+		if (width < 980) {
+			if (e.target !== links && e.target !== menu) {
+				showLinks = false;
+			}
+		}
+	}}
+/>
 
 <nav>
 	<div class="socials">
@@ -33,38 +52,59 @@
 		{/if}
 	</div>
 
-	<div class="page-links">
-		{#if ready}
-			<a
-				in:fly={{ x: 200, duration: 1200 }}
-				class={$page.url.pathname == '/' ? 'active' : ''}
-				href="/">Home</a
-			>
-			<a
-				in:fly={{ x: 200, duration: 1700 }}
-				class={$page.url.pathname == '/committee' ? 'active' : ''}
-				href="/committee">Committee</a
-			>
-			<a
-				in:fly={{ x: 200, duration: 2200 }}
-				class={$page.url.pathname == '/agenda' ? 'active' : ''}
-				href="/agenda">Agenda</a
-			>
-			<a
-				in:fly={{ x: 200, duration: 2700 }}
-				class={$page.url.pathname == '/guidebooks' ? 'active' : ''}
-				href="/guidebooks">Guidebooks</a
-			>
-			<a
-				in:fly={{ x: 200, duration: 3200 }}
-				class={$page.url.pathname == '/registration' ? 'active' : ''}
-				href="/registration">Registration</a
-			>
-			<a in:fly={{ x: 200, duration: 3700 }} class="contact" href="mailto:email@gmail.com"
-				>Contact Us</a
-			>
-		{/if}
-	</div>
+	{#if width >= 980 || showLinks}
+		<div
+			class="page-links"
+			bind:this={links}
+			in:fly={showLinks ? { x: 200, duration: 800 } : undefined}
+			out:fly={{ x: 200, duration: 800 }}
+		>
+			{#if ready}
+				<a
+					in:fly={showLinks ? undefined : { x: 200, duration: 1200 }}
+					class={$page.url.pathname == '/' ? 'active' : ''}
+					href="/">Home</a
+				>
+				<a
+					in:fly={showLinks ? undefined : { x: 200, duration: 1700 }}
+					class={$page.url.pathname == '/committee' ? 'active' : ''}
+					href="/committee">Committee</a
+				>
+				<a
+					in:fly={showLinks ? undefined : { x: 200, duration: 2200 }}
+					class={$page.url.pathname == '/agenda' ? 'active' : ''}
+					href="/agenda">Agenda</a
+				>
+				<a
+					in:fly={showLinks ? undefined : { x: 200, duration: 2700 }}
+					class={$page.url.pathname == '/guidebooks' ? 'active' : ''}
+					href="/guidebooks">Guidebooks</a
+				>
+				<a
+					in:fly={showLinks ? undefined : { x: 200, duration: 3200 }}
+					class={$page.url.pathname == '/registration' ? 'active' : ''}
+					href="/registration">Registration</a
+				>
+				<a
+					in:fly={showLinks ? undefined : { x: 200, duration: 3700 }}
+					class="contact"
+					href="mailto:email@gmail.com">Contact Us</a
+				>
+			{/if}
+		</div>
+	{/if}
+
+	{#if width < 980}
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
+		<img
+			in:fade={{ duration: 600 }}
+			bind:this={menu}
+			class="menu"
+			on:click={() => (showLinks = !showLinks)}
+			src={Menu}
+			alt="Menu"
+		/>
+	{/if}
 </nav>
 
 <style>
@@ -85,6 +125,7 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		align-items: center;
 		z-index: 99;
 	}
 	.socials {
@@ -160,5 +201,33 @@
 	}
 	.page-links *:hover:after {
 		width: 100%;
+	}
+	.menu {
+		width: 55px;
+		height: 35px;
+		cursor: pointer;
+	}
+
+	@media screen and (max-width: 980px) {
+		.page-links {
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			flex-direction: column;
+			background-color: #000;
+			padding: 35px 40px;
+			width: 200px;
+		}
+	}
+	@media screen and (max-width: 800px) {
+		.page-links {
+			width: 100px;
+		}
+	}
+	@media screen and (max-width: 460px) {
+		nav {
+			padding: 0 20px;
+		}
 	}
 </style>
