@@ -8,12 +8,10 @@
 	import Line1 from '$lib/assets/lines/Vector 1.svg';
 	import Line2 from '$lib/assets/lines/Vector 2.svg';
 	import Line3 from '$lib/assets/lines/Vector 3.svg';
-	import Line4 from '$lib/assets/lines/Vector 4.svg';
 
 	import Blob1 from '$lib/assets/blobs/Vector 1.svg';
 	import Blob2 from '$lib/assets/blobs/Vector 2.svg';
 	import Blob3 from '$lib/assets/blobs/Vector 3.svg';
-	import Blob4 from '$lib/assets/blobs/Vector 4.svg';
 
 	import Saos from 'saos';
 
@@ -56,6 +54,12 @@
 			</div>
 		</div>
 	</Saos>
+
+	<img class="lines line1" src={Line1} alt="" />
+	<img class="blobs blob1" src={Blob1} alt="" />
+
+	<img class="lines line2" src={Line2} alt="" />
+	<img class="blobs blob2" src={Blob2} alt="" />
 </div>
 
 <div class="letters">
@@ -154,17 +158,10 @@
 			</div>
 		</div>
 	</Saos>
+
+	<img class="lines line3" src={Line3} alt="" />
+	<img class="blobs blob3" src={Blob3} alt="" />
 </div>
-
-<img class="lines line1" src={Line1} alt="" />
-<img class="lines line2" src={Line2} alt="" />
-<img class="lines line3" src={Line3} alt="" />
-<img class="lines line4" src={Line4} alt="" />
-
-<img class="blobs blob1" src={Blob1} alt="" />
-<img class="blobs blob2" src={Blob2} alt="" />
-<img class="blobs blob3" src={Blob3} alt="" />
-<img class="blobs blob4" src={Blob4} alt="" />
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
@@ -207,6 +204,8 @@
 		place-items: center;
 		gap: 50px;
 		padding: 60px 0;
+		position: relative;
+		overflow: visible;
 	}
 	.hero .container {
 		width: 600px;
@@ -287,6 +286,8 @@
 		padding: 0 48px;
 		margin: 48px 0;
 		text-align: center;
+		position: relative;
+		overflow: visible;
 	}
 	.executive-board h1 {
 		margin-bottom: 70px;
@@ -330,37 +331,30 @@
 	}
 	.line1 {
 		left: 0;
-		top: calc(100vh);
+		top: 0;
 	}
-	.line2 {
-		right: 0;
-		top: calc(100vh - 40px);
-	}
-	.line3 {
-		top: calc(100vh * 3.6);
-	}
-	.line4 {
-		top: calc(100vh * 2.8);
-		right: 0;
+	.blob1 {
+		bottom: -38px;
+		left: -40px;
 	}
 
-	.blob1 {
-		top: calc(100vh + 500px);
-		left: -60px;
+	.line2 {
+		right: 0;
+		top: -28px;
 	}
 	.blob2 {
-		top: calc(100vh + 100px);
+		bottom: -100px;
 		right: 0;
 		width: 380px;
 	}
-	.blob3 {
-		top: calc(100vh * 3.8);
-		right: 0;
-		width: 360px;
+
+	.line3 {
+		bottom: 0;
+		left: 0;
 	}
-	.blob4 {
-		top: calc(100vh * 3.7);
-		width: 400px;
+	.blob3 {
+		bottom: 56px;
+		left: -48px;
 	}
 
 	@keyframes -global-slide-bottom {
@@ -445,6 +439,12 @@
 		.content p {
 			flex: auto;
 		}
+		.line2 {
+			display: none;
+		}
+		.blob2 {
+			display: none;
+		}
 	}
 
 	@media screen and (max-width: 750px) {
@@ -454,6 +454,31 @@
 		}
 		.board .sg {
 			grid-area: 1 / 1 / span 1 / span 2;
+		}
+		.line3 {
+			top: -80px;
+			left: 0;
+		}
+		.blob3 {
+			width: 360px;
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+		.line3 {
+			display: none;
+		}
+		.blob3 {
+			top: 0;
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		.line1 {
+			top: 190px;
+		}
+		.blob1 {
+			display: none;
 		}
 	}
 </style>
