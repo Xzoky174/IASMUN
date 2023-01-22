@@ -127,6 +127,7 @@
 		justify-content: space-between;
 		align-items: center;
 		z-index: 99;
+		font-family: 'Inter', sans-serif;
 	}
 	.socials {
 		display: flex;
