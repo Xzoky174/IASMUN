@@ -68,22 +68,22 @@
 				<a
 					in:fly={showLinks ? undefined : { x: 200, duration: 1700 }}
 					class={$page.url.pathname == '/committee' ? 'active' : ''}
-					href="/committee">Committee</a
+					href="/coming-soon">Committee</a
 				>
 				<a
 					in:fly={showLinks ? undefined : { x: 200, duration: 2200 }}
 					class={$page.url.pathname == '/agenda' ? 'active' : ''}
-					href="/agenda">Agenda</a
+					href="/coming-soon">Agenda</a
 				>
 				<a
 					in:fly={showLinks ? undefined : { x: 200, duration: 2700 }}
 					class={$page.url.pathname == '/guidebooks' ? 'active' : ''}
-					href="/guidebooks">Guidebooks</a
+					href="/coming-soon">Guidebooks</a
 				>
 				<a
 					in:fly={showLinks ? undefined : { x: 200, duration: 3200 }}
 					class={$page.url.pathname == '/registration' ? 'active' : ''}
-					href="/registration">Registration</a
+					href="/coming-soon">Registration</a
 				>
 				<a
 					in:fly={showLinks ? undefined : { x: 200, duration: 3700 }}
