@@ -73,7 +73,7 @@
 		</Saos>
 	</div>
 
-	<p>&#169; IASMUN {new Date().getFullYear()}</p>
+	<p class="copyright">&#169; All Rights Reserved</p>
 
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<svg
@@ -138,8 +138,10 @@
 	.IAS {
 		width: 280px;
 	}
-	footer p {
-		align-self: flex-end;
+	footer .copyright {
+		position: absolute;
+		bottom: 8px;
+		right: 22px;
 	}
 	.top {
 		position: absolute;
@@ -193,6 +195,10 @@
 		.IAS {
 			width: 140px;
 		}
+		footer {
+			flex-direction: column;
+			gap: 16px;
+		}
 	}
 
 	@media screen and (max-width: 660px) {
@@ -201,6 +207,12 @@
 		}
 		.IAS {
 			display: none;
+		}
+		.socials {
+			margin-bottom: 16px;
+		}
+		footer {
+			align-items: start;
 		}
 	}
 </style>
