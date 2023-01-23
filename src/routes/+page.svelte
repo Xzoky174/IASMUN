@@ -359,8 +359,8 @@
 
 	@keyframes -global-slide-bottom {
 		0% {
-			-webkit-transform: translateY(-400px);
-			transform: translateY(-400px);
+			-webkit-transform: translateY(-100px);
+			transform: translateY(-100px);
 		}
 		100% {
 			-webkit-transform: translateY(0);
