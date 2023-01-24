@@ -90,38 +90,6 @@
 			</div>
 		</div>
 	{/if}
-
-	{#if width >= 1220}
-		<Saos once={true} animation="slide-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both">
-			<div class="container ca">
-				<h1><b>Chief Advisor</b></h1>
-
-				<div class="content">
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare accumsan neque eu
-						aliquam. Maecenas magna nibh, pulvinar ut risus et, tempor gravida nunc. Vestibulum a
-						nisl sit amet massa ultricies malesuada vel et lacus.
-					</p>
-
-					<div class="img" />
-				</div>
-			</div>
-		</Saos>
-	{:else}
-		<div class="container ca">
-			<h1><b>Chief Advisor</b></h1>
-
-			<div class="content">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare accumsan neque eu
-					aliquam. Maecenas magna nibh, pulvinar ut risus et, tempor gravida nunc. Vestibulum a nisl
-					sit amet massa ultricies malesuada vel et lacus.
-				</p>
-
-				<div class="img" />
-			</div>
-		</div>
-	{/if}
 </div>
 
 <div class="executive-board">
@@ -271,13 +239,6 @@
 	}
 	.letters .sg {
 		background-image: linear-gradient(to bottom, #1f4360, #000);
-	}
-	.letters .ca {
-		background-image: linear-gradient(to bottom, #3f0c55, #000);
-	}
-
-	.letters .ca .content {
-		flex-direction: row-reverse;
 	}
 
 	.executive-board {
