@@ -98,10 +98,9 @@
 
 	footer {
 		position: relative;
-		display: flex;
-		flex-direction: row;
+		display: grid;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
 		background-color: #000;
 		padding: 18px 48px;
 		font-family: 'Montserrat', sans-serif;
@@ -116,6 +115,8 @@
 		grid-template-columns: 50px 1fr;
 		align-items: center;
 		justify-content: center;
+		position: absolute;
+		left: 60px;
 	}
 	.youtube-logo {
 		height: 38px;
@@ -186,6 +187,9 @@
 		.IAS {
 			width: 200px;
 		}
+		footer {
+			height: 210px;
+		}
 	}
 
 	@media screen and (max-width: 750px) {
@@ -199,6 +203,9 @@
 			flex-direction: column;
 			gap: 16px;
 		}
+		.socials {
+			left: 40px;
+		}
 	}
 
 	@media screen and (max-width: 660px) {
@@ -207,12 +214,6 @@
 		}
 		.IAS {
 			display: none;
-		}
-		.socials {
-			margin-bottom: 16px;
-		}
-		footer {
-			align-items: start;
 		}
 	}
 </style>
