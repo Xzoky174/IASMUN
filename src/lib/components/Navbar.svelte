@@ -171,6 +171,7 @@
 		flex-direction: row;
 		align-items: center;
 		gap: 25px;
+		text-align: center;
 	}
 	.page-links * {
 		font-family: 'Inter', sans-serif;

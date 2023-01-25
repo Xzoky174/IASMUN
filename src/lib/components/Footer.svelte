@@ -33,7 +33,7 @@
 		</Saos>
 
 		<Saos once={true} animation={slide_left}>
-			<p>@IASMUN</p>
+			<p>@ias.mun</p>
 		</Saos>
 
 		<Saos once={true} animation={slide_right}>
@@ -43,7 +43,7 @@
 		</Saos>
 
 		<Saos once={true} animation={slide_left}>
-			<p>IASMUN</p>
+			<p>ias.mun</p>
 		</Saos>
 
 		<Saos once={true} animation={slide_right}>
@@ -53,7 +53,7 @@
 		</Saos>
 
 		<Saos once={true} animation={slide_left}>
-			<p>@IASMUN</p>
+			<p>@ias-mun</p>
 		</Saos>
 	</div>
 

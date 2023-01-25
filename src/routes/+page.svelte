@@ -5,6 +5,12 @@
 	import { fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
 
+	import Youssef from '$lib/assets/executive-board/Youssef.jpg';
+	import Maya from '$lib/assets/executive-board/Maya.jpg';
+	import Amina from '$lib/assets/executive-board/Amina.jpg';
+	import Daniel from '$lib/assets/executive-board/Daniel.jpg';
+	import Sama from '$lib/assets/executive-board/Sama.jpg';
+
 	import Line1 from '$lib/assets/lines/Vector 1.svg';
 	import Line2 from '$lib/assets/lines/Vector 2.svg';
 	import Line3 from '$lib/assets/lines/Vector 3.svg';
@@ -100,27 +106,27 @@
 	<Saos once={true} animation="slide-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both">
 		<div class="board">
 			<div class="container sg">
-				<div class="img" />
+				<img class="img" src={Youssef} alt="Secretary General" />
 
 				<p>Youssef Ashraf Hussein <br /> <b>Secretary General</b></p>
 			</div>
 			<div class="container">
-				<div class="img" />
+				<img class="img" src={Maya} alt="Head of PR" />
 
 				<p>Maya Munir Jasser <br /> <b>Head of PR</b></p>
 			</div>
 			<div class="container">
-				<div class="img" />
+				<img class="img" src={Amina} alt="Head of PR" />
 
 				<p>Amina Amrouni <br /> <b>Head of Media</b></p>
 			</div>
 			<div class="container">
-				<div class="img" />
+				<img class="img" src={Daniel} alt="Head of PR" />
 
 				<p>Daniel Obeid <br /> <b>Head of Logistics</b></p>
 			</div>
 			<div class="container">
-				<div class="img" />
+				<img class="img" src={Sama} alt="Head of PR" />
 
 				<p>Samaa Hamdy Afifi <br /> <b>Chief Advisor</b></p>
 			</div>
@@ -257,32 +263,32 @@
 	.board {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		gap: 48px;
-	}
-	.board .sg {
-		grid-area: 1 / 1 / span 1 / span 4;
-		margin-bottom: 48px;
-	}
-	.board .sg p {
-		font-size: 28px !important;
-	}
-	.board .sg .img {
-		height: 140px;
-		width: 120px;
-	}
-	.board .container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		gap: 50px;
 	}
 	.container > .img {
-		height: 120px;
-		width: 100px;
+		height: 180px;
+		width: 150px;
 		background-color: #326198;
 		margin-bottom: 12px;
 	}
 	.container > p {
 		font-size: 20px;
+	}
+	.board .sg {
+		grid-area: 1 / 1 / span 1 / span 4;
+		margin-bottom: 15px;
+	}
+	.board .sg p {
+		font-size: 28px;
+	}
+	.board .sg .img {
+		height: 210px;
+		width: 180px;
+	}
+	.board .container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	.lines,
@@ -310,7 +316,7 @@
 	}
 
 	.line3 {
-		bottom: 0;
+		bottom: 40px;
 		left: 0;
 	}
 	.blob3 {
@@ -440,6 +446,16 @@
 		}
 		.blob1 {
 			display: none;
+		}
+	}
+
+	@media screen and (max-width: 450px) {
+		.board {
+			grid-template-columns: repeat(1, 1fr) !important;
+			gap: 24px;
+		}
+		.board .sg {
+			grid-area: 1 / 1 / span 1 / span 1;
 		}
 	}
 </style>
