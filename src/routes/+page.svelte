@@ -103,7 +103,7 @@
 		<h1>Meet Our <br /> <b>Executive Board</b></h1>
 	</Saos>
 
-	<Saos once={true} animation="slide-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both">
+	<Saos once={true} animation="slide-top 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both">
 		<div class="board">
 			<div class="container sg">
 				<img class="img" src={Youssef} alt="Secretary General" />
@@ -337,8 +337,8 @@
 
 	@keyframes -global-slide-top {
 		0% {
-			-webkit-transform: translateY(400px);
-			transform: translateY(400px);
+			-webkit-transform: translateY(200px);
+			transform: translateY(200px);
 		}
 		100% {
 			-webkit-transform: translateY(0);
