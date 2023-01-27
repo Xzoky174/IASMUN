@@ -30,7 +30,7 @@
 	let width: number;
 
 	const sg_letter =
-		'Dear venerable delegates, advisors, and organizers,<br /><br />I am delighted to welcome you to International Academic School Model United Nations(IASMUN) 2023, our first annual conference at International Academic School. It is an honor to be the Secretary-General of IASMUN 2023!<br /><br />IASMUN has been initiated for all students across the region for diversity, competitiveness, and the concoction of creative ideas. IASMUN will commence with four distinct committees for the delegates to choose between based on their interest and level. IASMUN possesses a superior set of members with various perks and a remarkable skill set. IASMUN grants students the opportunity to enhance their research and debating skills, confidence, extemporization, and writing and speaking abilities through a variety of committees and issues. It provides all its participants to display their inner talents and flourish them. Furthermore, IASMUN fundamentally prepares its participants for university and the future as a whole.<br /><br />We highly encourage you to participate in an enlightening, pleasurable, and memorable occasion that will remarkably transfigure and inspire everyone. IASMUN strives for reinforcing and developing all required skills that create an exceptional ambassador!<br /><br />Best regards,<br /><br />Youssef Ashraf Hussein Zaki';
+		'Dear venerable delegates, advisors, and organizers,<br /><br />I am delighted to welcome you to International Academic School Model United Nations (IASMUN) 2023, our first annual conference at International Academic School. It is an honour to be the founder and Secretary-General of IASMUN 2023!<br /><br />IASMUN has been initiated for all students across the region for diversity, competitiveness, and the concoction of creative ideas. IASMUN will commence with four distinct committees for the delegates to choose between based on their interest and level.<br /><br />IASMUN possesses a superior set of members with various perks and a remarkable skill set. IASMUN grants students the opportunity to enhance their research and debating skills, confidence, extemporization, and writing and speaking abilities through various committees and issues. It provides all its participants to display their inner talents and flourish them. Furthermore, IASMUN fundamentally prepares its participants for university and the future as a whole.<br /><br />We highly encourage you to participate in an enlightening, pleasurable, and memorable occasion that will remarkably transfigure and inspire everyone. IASMUN strives to reinforce and develop all required skills that create an exceptional ambassador!<br /><br />Best regards,<br /><br />Youssef Ashraf Hussein Zaki';
 </script>
 
 <svelte:window bind:innerWidth={width} />
@@ -47,7 +47,7 @@
 		<div class="container theme">
 			<div>
 				<h1>Our <b>Theme</b></h1>
-				<p>Welcoming Opportunities, Embracing Challenges, and Seeking Development.</p>
+				<p>Welcoming Opportunities, Embracing Challenges, and Aspiring (Seeking) Development.</p>
 			</div>
 		</div>
 	</Saos>
@@ -55,8 +55,16 @@
 	<Saos once={true} animation="scale-up-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both">
 		<div class="container vision">
 			<div>
-				<h1>Our <b>Vision</b></h1>
-				<p>Sample Text</p>
+				<h1>About <b>Us</b></h1>
+				<p>
+					IASMUN started when a group of passionate IAS students decided to bring the amazing
+					experience of Model United Nations to their school. They had a vision for an immersive,
+					diverse, and engaging MUN.<br /><br />After students who have MUN experience talked to
+					organizers from various MUNs rigorously. Soon, the selected chairs and Co-chairs, the head
+					of media, and the head of logistics were decided. Ever since, the students have started
+					working, documenting, and preparing everything accordingly and systematically. With grit,
+					persistence, and the full support of IAS, the passion project soon became a reality.
+				</p>
 			</div>
 		</div>
 	</Saos>
@@ -82,7 +90,7 @@
 						{@html sg_letter}
 					</p>
 
-					<div class="img" />
+					<img src={Youssef} alt="Secretary General" />
 				</div>
 			</div>
 		</Saos>
@@ -95,7 +103,7 @@
 					{@html sg_letter}
 				</p>
 
-				<div class="img" />
+				<img src={Youssef} alt="Secretary General" />
 			</div>
 		</div>
 	{/if}
@@ -195,11 +203,12 @@
 		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.8);
 		color: #fff;
 		font-family: 'Rubik', sans-serif;
+		padding: 0 12px;
 	}
 	.hero p {
 		text-align: center;
 		margin-top: 18px;
-		max-width: 400px;
+		max-width: 450px;
 		font-size: 18px;
 	}
 	.hero .theme {
@@ -207,6 +216,12 @@
 	}
 	.hero .vision {
 		background-color: #1f4e60;
+		padding: 28px 12px;
+		height: auto;
+	}
+	.hero .vision p {
+		max-width: 550px;
+		text-align: start;
 	}
 
 	.letters {
@@ -242,12 +257,12 @@
 	}
 	.content p {
 		font-size: 36px;
-		flex: 0.8;
+		flex: 0.9;
 	}
-	.content .img {
-		height: 400px;
+	.content img {
+		height: 360px;
 		background-color: #326198;
-		flex: 0.5;
+		flex: 0.4;
 	}
 	.letters .sg {
 		background-image: linear-gradient(to bottom, #1f4360, #000);
@@ -394,10 +409,10 @@
 		}
 	}
 
-	@media screen and (max-width: 620px) {
+	@media screen and (max-width: 640px) {
 		.theme,
 		.vision {
-			width: calc(100vw - 20px) !important;
+			width: calc(100vw - 40px) !important;
 		}
 	}
 
@@ -413,9 +428,9 @@
 			flex-direction: column !important;
 			gap: 48px;
 		}
-		.content .img {
+		.content img {
 			width: 350px;
-			height: 320px;
+			height: 370px;
 			background-color: #326198;
 			flex: auto;
 		}
@@ -427,6 +442,12 @@
 		}
 		.blob2 {
 			display: none;
+		}
+	}
+
+	@media screen and (max-width: 550px) {
+		.content {
+			padding: 0 20px;
 		}
 	}
 
