@@ -70,7 +70,10 @@
 
 <div class="letters">
 	{#if width >= 1220}
-		<Saos once={true} animation={'slide-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both'}>
+		<Saos
+			once={true}
+			animation={'scale-up-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both'}
+		>
 			<div class="container sg">
 				<h1>Secretary General's<br /><b>Welcome</b></h1>
 
@@ -432,9 +435,6 @@
 			grid-template-columns: repeat(2, 1fr) !important;
 			gap: 24px;
 		}
-		.board .sg {
-			grid-area: 1 / 1 / span 1 / span 2;
-		}
 		.line3 {
 			top: -80px;
 			left: 0;
@@ -466,9 +466,6 @@
 		.board {
 			grid-template-columns: repeat(1, 1fr) !important;
 			gap: 24px;
-		}
-		.board .sg {
-			grid-area: 1 / 1 / span 1 / span 1;
 		}
 	}
 </style>
