@@ -102,7 +102,7 @@
 		align-items: center;
 		justify-content: center;
 		background-color: #000;
-		padding: 18px 48px;
+		padding: 28px 48px;
 		font-family: 'Montserrat', sans-serif;
 		color: #fff;
 	}
@@ -117,6 +117,7 @@
 		justify-content: center;
 		position: absolute;
 		left: 60px;
+		margin-bottom: 28px;
 	}
 	.youtube-logo {
 		height: 38px;
