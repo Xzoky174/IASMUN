@@ -103,13 +103,16 @@
 		<h1>Meet Our <br /> <b>Executive Board</b></h1>
 	</Saos>
 
-	<Saos once={true} animation="slide-top 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both">
-		<div class="board">
-			<div class="container sg">
-				<img class="img" src={Youssef} alt="Secretary General" />
+	<Saos once={true} animation="slide-top-sg 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both">
+		<div class="container sg">
+			<img class="img" src={Youssef} alt="Secretary General" />
 
-				<p>Youssef Ashraf Hussein <br /> <b>Secretary General</b></p>
-			</div>
+			<p>Youssef Ashraf Hussein <br /> <b>Secretary General</b></p>
+		</div>
+	</Saos>
+
+	<Saos once={true} animation="slide-top 1.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both">
+		<div class="board">
 			<div class="container">
 				<img class="img" src={Maya} alt="Head of PR" />
 
@@ -274,18 +277,17 @@
 	.container > p {
 		font-size: 20px;
 	}
-	.board .sg {
-		grid-area: 1 / 1 / span 1 / span 4;
-		margin-bottom: 15px;
+	.executive-board .sg {
+		margin-bottom: 55px;
 	}
 	.board .sg p {
 		font-size: 28px;
 	}
-	.board .sg .img {
+	.executive-board .sg .img {
 		height: 210px;
 		width: 180px;
 	}
-	.board .container {
+	.executive-board .container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -339,6 +341,17 @@
 		0% {
 			-webkit-transform: translateY(200px);
 			transform: translateY(200px);
+		}
+		100% {
+			-webkit-transform: translateY(0);
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes -global-slide-top-sg {
+		0% {
+			-webkit-transform: translateY(400px);
+			transform: translateY(400px);
 		}
 		100% {
 			-webkit-transform: translateY(0);
