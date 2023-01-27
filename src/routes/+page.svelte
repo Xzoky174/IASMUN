@@ -21,6 +21,8 @@
 
 	import Saos from 'saos';
 
+	import countdown from 'countdown';
+
 	let ready = false;
 	onMount(() => {
 		ready = true;
@@ -31,6 +33,25 @@
 
 	const sg_letter =
 		'Dear venerable delegates, advisors, and organizers,<br /><br />I am delighted to welcome you to International Academic School Model United Nations (IASMUN) 2023, our first annual conference at International Academic School. It is an honour to be the founder and Secretary-General of IASMUN 2023!<br /><br />IASMUN has been initiated for all students across the region for diversity, competitiveness, and the concoction of creative ideas. IASMUN will commence with four distinct committees for the delegates to choose between based on their interest and level.<br /><br />IASMUN possesses a superior set of members with various perks and a remarkable skill set. IASMUN grants students the opportunity to enhance their research and debating skills, confidence, extemporization, and writing and speaking abilities through various committees and issues. It provides all its participants to display their inner talents and flourish them. Furthermore, IASMUN fundamentally prepares its participants for university and the future as a whole.<br /><br />We highly encourage you to participate in an enlightening, pleasurable, and memorable occasion that will remarkably transfigure and inspire everyone. IASMUN strives to reinforce and develop all required skills that create an exceptional ambassador!<br /><br />Best regards,<br /><br />Youssef Ashraf Hussein Zaki';
+
+	let confDate = new Date();
+
+	confDate.setSeconds(0);
+	confDate.setMinutes(30);
+	confDate.setHours(1);
+	confDate.setDate(17);
+	confDate.setMonth(3);
+	confDate.setFullYear(2023);
+
+	let countDownDate: any = null;
+
+	setInterval(() => {
+		countDownDate = countdown(
+			null,
+			confDate,
+			countdown.MONTHS | countdown.DAYS | countdown.HOURS
+		).toString();
+	}, 1000);
 </script>
 
 <svelte:window bind:innerWidth={width} />
@@ -43,6 +64,10 @@
 </div>
 
 <div class="hero">
+	<p class="countdown">
+		<span class="header">Next Conference:</span>{countDownDate}<br />(17th March 2023)
+	</p>
+
 	<Saos once={true} animation="scale-up-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both">
 		<div class="container theme">
 			<div>
@@ -187,11 +212,25 @@
 		right: 0;
 		margin: 0 auto;
 	}
+	.countdown .header {
+		font-weight: bold;
+		display: block;
+		margin-bottom: 22px;
+	}
+	.countdown {
+		text-align: center;
+		font-size: 28px;
+		margin: 46px 0;
+		background-color: #326198;
+		color: #fff;
+		padding: 18px 32px;
+	}
 	.hero {
 		display: grid;
 		place-items: center;
 		gap: 50px;
-		padding: 60px 0;
+		padding: 30px 0;
+		padding-bottom: 50px;
 		position: relative;
 		overflow: visible;
 	}
@@ -205,7 +244,7 @@
 		font-family: 'Rubik', sans-serif;
 		padding: 0 12px;
 	}
-	.hero p {
+	.hero .container p {
 		text-align: center;
 		margin-top: 18px;
 		max-width: 450px;
@@ -240,7 +279,7 @@
 		padding: 28px 0;
 	}
 	.letters .sg {
-		height: 740px;
+		height: 750px;
 	}
 	.letters .sg p {
 		font-size: 20px;
@@ -321,7 +360,7 @@
 		top: 0;
 	}
 	.blob1 {
-		bottom: -38px;
+		bottom: 120px;
 		left: -40px;
 	}
 
@@ -465,12 +504,30 @@
 		}
 	}
 
+	@media screen and (max-width: 360px) {
+		.IASMUN-pic {
+			height: 380px;
+		}
+	}
+
+	@media screen and (max-width: 320px) {
+		.blob3 {
+			width: 260px;
+		}
+	}
+
 	@media screen and (max-width: 600px) {
 		.line3 {
 			display: none;
 		}
 		.blob3 {
 			top: 0;
+		}
+	}
+
+	@media screen and (max-width: 475px) {
+		.countdown {
+			width: calc(100vw - 80px);
 		}
 	}
 
