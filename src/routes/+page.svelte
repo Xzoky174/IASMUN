@@ -299,7 +299,7 @@
 		flex: 0.9;
 	}
 	.content img {
-		height: 360px;
+		height: 380px;
 		background-color: #326198;
 		flex: 0.4;
 	}
