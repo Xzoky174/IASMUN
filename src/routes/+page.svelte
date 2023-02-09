@@ -38,7 +38,7 @@
 
 	confDate.setSeconds(0);
 	confDate.setMinutes(30);
-	confDate.setHours(1);
+	confDate.setHours(13);
 	confDate.setDate(17);
 	confDate.setMonth(3);
 	confDate.setFullYear(2023);
@@ -64,9 +64,11 @@
 </div>
 
 <div class="hero">
-	<p class="countdown">
-		<span class="header">Next Conference:</span>{countDownDate}<br />(17th March 2023)
-	</p>
+	<Saos once={true} animation="fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both">
+		<p class="countdown">
+			<span class="header">Next Conference:</span>{countDownDate}<br />(17th March 2023)
+		</p>
+	</Saos>
 
 	<Saos once={true} animation="scale-up-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both">
 		<div class="container theme">
@@ -222,6 +224,7 @@
 		font-size: 28px;
 		margin: 46px 0;
 		background-color: #326198;
+		border-radius: 6px;
 		color: #fff;
 		padding: 18px 32px;
 	}
@@ -383,6 +386,14 @@
 		left: -48px;
 	}
 
+	@keyframes -global-fade-in {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
 	@keyframes -global-slide-bottom {
 		0% {
 			-webkit-transform: translateY(-100px);
