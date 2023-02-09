@@ -75,6 +75,10 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Committees</title>
+</svelte:head>
+
 <h1 class="header">Our Committees</h1>
 
 <div class="committees">

@@ -56,6 +56,10 @@
 
 <svelte:window bind:innerWidth={width} />
 
+<svelte:head>
+	<title>Home</title>
+</svelte:head>
+
 <div class="intro">
 	<img class="IAS-pic" src={IASSchool} alt="IAS School" />
 	{#if ready}
