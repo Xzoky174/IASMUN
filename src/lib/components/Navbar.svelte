@@ -217,14 +217,15 @@
 			bottom: 0;
 			right: 0;
 			flex-direction: column;
+			justify-content: center;
 			background-color: #000;
 			padding: 35px 40px;
-			width: 200px;
+			width: 280px;
 		}
 	}
-	@media screen and (max-width: 800px) {
+	@media screen and (max-width: 660px) {
 		.page-links {
-			width: 100px;
+			width: 200px;
 		}
 	}
 	@media screen and (max-width: 460px) {
