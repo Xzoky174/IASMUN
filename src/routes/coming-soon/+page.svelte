@@ -10,5 +10,6 @@
 		display: grid;
 		place-items: center;
 		font-family: 'Nunito', sans-serif;
+		text-align: center;
 	}
 </style>
