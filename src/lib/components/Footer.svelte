@@ -65,14 +65,14 @@
 	<div class="images">
 		<Saos
 			once={true}
-			animation="scale-up-center 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both"
+			animation="scale-up-center-logo 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both"
 		>
 			<img class="IASMUN" alt="IASMUN" src={IASMun} />
 		</Saos>
 
 		<Saos
 			once={true}
-			animation="scale-up-center 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both"
+			animation="scale-up-center-logo 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both"
 		>
 			<img class="IAS" alt="IAS" src={IASSchool} />
 		</Saos>
@@ -172,6 +172,17 @@
 	}
 	.top:hover {
 		transform: translateY(-10px);
+	}
+
+	@keyframes -global-scale-up-center-logo {
+		0% {
+			-webkit-transform: scale(0.3s);
+			transform: scale(0.3);
+		}
+		100% {
+			-webkit-transform: scale(1);
+			transform: scale(1);
+		}
 	}
 
 	@keyframes -global-footer-slide-right {
