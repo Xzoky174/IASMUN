@@ -17,7 +17,7 @@
 <footer>
 	<div class="socials">
 		<Saos once={true} animation={slide_right}>
-			<a href="/">
+			<a target="_blank" rel="noreferrer" href="/">
 				<img class="youtube-logo" src={YoutubeLogo} alt="YouTube" />
 			</a>
 		</Saos>
@@ -27,8 +27,13 @@
 		</Saos>
 
 		<Saos once={true} animation={slide_right}>
-			<a href="/" class="instagram">
-				<img src={InstagramLogo} alt="Instagram" />
+			<a
+				target="_blank"
+				rel="noreferrer"
+				href="https://www.instagram.com/ias.mun"
+				class="instagram"
+			>
+				<img class="instagram-logo" src={InstagramLogo} alt="Instagram" />
 			</a>
 		</Saos>
 
@@ -37,7 +42,7 @@
 		</Saos>
 
 		<Saos once={true} animation={slide_right}>
-			<a href="/">
+			<a target="_blank" rel="noreferrer" href="/">
 				<img class="facebook-logo" src={FacebookLogo} alt="Facebook" />
 			</a>
 		</Saos>
@@ -47,7 +52,7 @@
 		</Saos>
 
 		<Saos once={true} animation={slide_right}>
-			<a href="/">
+			<a target="_blank" rel="noreferrer" href="/">
 				<img class="twitter-logo" src={TwitterLogo} alt="Twitter" />
 			</a>
 		</Saos>
@@ -129,6 +134,10 @@
 	.twitter-logo {
 		width: 28px;
 		height: 25px;
+	}
+	.instagram-logo {
+		width: 38px;
+		height: 38px;
 	}
 	.images {
 		display: flex;

@@ -40,7 +40,7 @@
 				<a target="_blank" rel="noreferrer" href="/"><img src={TwitterLogo} alt="twitter" /></a>
 				<a target="_blank" rel="noreferrer" href="/"><img src={FacebookLogo} alt="facebook" /></a>
 				<a target="_blank" rel="noreferrer" href="https://www.instagram.com/ias.mun">
-					<img src={InstagramLogo} alt="instagram" />
+					<img class="instagram-logo-img" src={InstagramLogo} alt="instagram" />
 				</a>
 				<a target="_blank" rel="noreferrer" href="/" class="youtube-logo">
 					<img class="youtube-logo-img" src={YoutubeLogo} alt="youtube" />
@@ -166,6 +166,11 @@
 	}
 	.youtube-logo-img {
 		height: 38px !important;
+	}
+	.instagram-logo-img {
+		width: 32px !important;
+		height: 32px !important;
+		margin-bottom: 2px;
 	}
 	.youtube-logo {
 		margin-left: 7px;
