@@ -39,7 +39,7 @@
 	confDate.setSeconds(0);
 	confDate.setMinutes(30);
 	confDate.setHours(13);
-	confDate.setDate(17);
+	confDate.setDate(10);
 	confDate.setMonth(3);
 	confDate.setFullYear(2023);
 
