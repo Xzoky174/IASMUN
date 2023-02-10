@@ -25,7 +25,7 @@
 <svelte:window
 	bind:innerWidth={width}
 	on:click={(e) => {
-		if (width < 980) {
+		if (width < 1150) {
 			if (e.target !== links && e.target !== menu) {
 				showLinks = false;
 			}
@@ -54,7 +54,7 @@
 		{/if}
 	</div>
 
-	{#if width >= 980 || showLinks}
+	{#if width >= 1150 || showLinks}
 		<div
 			class="page-links"
 			bind:this={links}
@@ -75,7 +75,7 @@
 				<a
 					in:fly={showLinks ? undefined : { x: 200, duration: 2200 }}
 					class={$page.url.pathname == '/conference-schedule' ? 'active' : ''}
-					href="/coming-soon">Conference Schedule</a
+					href="/conference-schedule">Conference Schedule</a
 				>
 				<a
 					in:fly={showLinks ? undefined : { x: 200, duration: 2700 }}
@@ -96,7 +96,7 @@
 		</div>
 	{/if}
 
-	{#if width < 980}
+	{#if width < 1150}
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<img
 			in:fade={{ duration: 600 }}
@@ -219,7 +219,7 @@
 		cursor: pointer;
 	}
 
-	@media screen and (max-width: 980px) {
+	@media screen and (max-width: 1150px) {
 		.page-links {
 			position: fixed;
 			top: 0;
@@ -237,9 +237,18 @@
 			width: 200px;
 		}
 	}
-	@media screen and (max-width: 460px) {
+	@media screen and (max-width: 500px) {
 		nav {
 			padding: 0 20px;
+		}
+	}
+	@media screen and (max-width: 400px) {
+		.page-links {
+			width: 180px;
+			padding: 35px 20px;
+		}
+		.text span:first-child {
+			display: none;
 		}
 	}
 </style>
