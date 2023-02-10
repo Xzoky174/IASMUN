@@ -213,7 +213,7 @@
 		color: #fff;
 		width: 780px;
 		padding: 24px;
-		padding-bottom: 0;
+		padding-bottom: 6px;
 		position: relative;
 	}
 	.committee-header {
