@@ -52,12 +52,16 @@
 		{
 			name: 'DISEC',
 			type: 2,
-			biography: '',
-			purpose: '',
+			biography:
+				'The United Nations (UN) Disarmament and International Security Committee (DISEC) was created as the first of the Main Committees in the General Assembly when the charter of the United Nations was signed in 1945. Thus, DISEC is often referred to as the First Committee. DISEC was formed to respond to the need for an international forum to discuss peace and security issues among members of the international community.',
+			purpose:
+				"According to the UN Charter, the purpose of DISEC in the General Assembly is to establish 'general principles of cooperation in the maintenance of international peace and security, including the principles governing disarmament and the regulation of armaments and also to give “recommendations with regard to such principles to the Members or to the Security Council.” Although DISEC cannot directly advise the Security Council's decision-making process, the UN Charter explains that DISEC can suggest specific topics for Security Council consideration. ",
 			topics: [],
-			chair_letter: '',
+			chair_letter:
+				'My name is Shayan Abbas and I am a Senior at IAS. I have been selected as a Chair at the IASMUN. I hope that I will be able to help you navigate the complex rules and regulations in the MUN while keeping it fun for all of you, delegates. My strongest desire is that this MUN will help you showcase your research, teamwork, debate skills, critical thinking, and public speaking abilities. As the chair, it is my responsibility that you will be able to make the most of your experience at the MUN. Moreover, I understand how privileged I am and I will do my best to serve as the chair of my committee I wish you all the best of luck! ',
 			chair_photo: '',
-			cochair_letter: '',
+			cochair_letter:
+				"My name is Rahaf Ahmed, and I am a junior at IAS. I am thrilled to have been appointed co-chair of my school's model United Nations. I hope that by participating in this event, you will be able to showcase your strongest research, teamwork, debate, critical thinking, and public speaking abilities. As co-chair, it is my responsibility to encourage all delegates to do their best and make the most of this experience, as it has the potential to enhance their self-confidence and public speaking skills. Taking part in model UN not only brings me great joy and excitement but also provides me with valuable experience and skills for my desired career path. I want to be a lawyer, and as important as preparation is, the ability to think on your feet is equally important when defending your client. Model UN can teach you both these skills. Although Model United Nations is a great learning experience and I encourage all of you to take it very seriously, I know that some of you may feel nervous or uneasy at first, but I assure you that it is a lot of fun and that you will want to participate again after your first time. Moreover, I understand how privileged and lucky I am and I will do my best to serve as a co chair in my committee and I wish you all the best of luck! ",
 			cochair_photo: ''
 		}
 	];
@@ -181,7 +185,7 @@
 		width: 6px;
 		height: 6px;
 		border-radius: 50%;
-		background-color: #ced4da;
+		background-color: #ced3d9;
 	}
 	.quickaccess-links:last-child::after {
 		display: none;
