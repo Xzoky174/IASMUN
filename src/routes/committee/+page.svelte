@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Saos from 'saos';
+
 	const committees = [
 		{
 			name: 'GA',
@@ -71,68 +73,73 @@
 	<title>Committees</title>
 </svelte:head>
 
-<h1 class="header">Our <b>Committees</b></h1>
+<Saos once={true} animation="slide-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;">
+	<h1 class="header">Our <b>Committees</b></h1>
+</Saos>
 
-<div class="quickaccess">
-	{#each committees as committee}
-		<a class="quickaccess-links" href={`#${committee.name}`}>{committee.name}</a>
-	{/each}
-</div>
+<Saos once={true} animation="slide-top-qaccess 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both">
+	<div class="quickaccess">
+		{#each committees as committee}
+			<a class="quickaccess-links" href={`#${committee.name}`}>{committee.name}</a>
+		{/each}
+	</div>
+</Saos>
 
 <div class="committees">
-	{#each committees as committee}
-		<div class={`committee ${committee.name}`} id={committee.name}>
-			<div class="committee-header">
-				<h1>{committee.name}</h1>
-			</div>
-
-			{#if committee.type == 1}
-				<div class="history">
-					<h2 class="subheader">History</h2>
-					<p class="desc">{committee.history}</p>
+	{#each committees as committee, index}
+		<Saos
+			once={true}
+			animation={index % 2 == 0
+				? 'slide-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;'
+				: 'slide-left 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;'}
+		>
+			<div class={`committee ${committee.name}`} id={committee.name}>
+				<div class="committee-header">
+					<h1>{committee.name}</h1>
 				</div>
-				<div class="mandate">
-					<h2 class="subheader">Mandate</h2>
-					<p class="desc">{committee.mandate}</p>
-				</div>
-			{:else if committee.type == 2}
-				<div class="biography">
-					<h2 class="subheader">Biography</h2>
-					<p class="desc">{committee.biography}</p>
-				</div>
-				<div class="purpose">
-					<h2 class="subheader">Purpose</h2>
-					<p class="desc">{committee.purpose}</p>
-				</div>
-			{/if}
-
-			<h2 class="subheader">Topics</h2>
-			<ol class="topics">
-				{#each committee.topics as topic}
-					<li>{topic}</li>
-				{/each}
-			</ol>
-
-			<div class="letters">
-				<div class="chair">
-					<h2 class="subheader">Chair's Letter</h2>
-
-					<div class="content">
-						<p>{@html committee.chair_letter}</p>
-						<div class="img" />
+				{#if committee.type == 1}
+					<div class="history">
+						<h2 class="subheader">History</h2>
+						<p class="desc">{committee.history}</p>
+					</div>
+					<div class="mandate">
+						<h2 class="subheader">Mandate</h2>
+						<p class="desc">{committee.mandate}</p>
+					</div>
+				{:else if committee.type == 2}
+					<div class="biography">
+						<h2 class="subheader">Biography</h2>
+						<p class="desc">{committee.biography}</p>
+					</div>
+					<div class="purpose">
+						<h2 class="subheader">Purpose</h2>
+						<p class="desc">{committee.purpose}</p>
+					</div>
+				{/if}
+				<h2 class="subheader">Topics</h2>
+				<ol class="topics">
+					{#each committee.topics as topic}
+						<li>{topic}</li>
+					{/each}
+				</ol>
+				<div class="letters">
+					<div class="chair">
+						<h2 class="subheader">Chair's Letter</h2>
+						<div class="content">
+							<p>{@html committee.chair_letter}</p>
+							<div class="img" />
+						</div>
+					</div>
+					<div class="co-chair">
+						<h2 class="subheader">Co-Chair's Letter</h2>
+						<div class="content">
+							<p>{@html committee.cochair_letter}</p>
+							<div class="img" />
+						</div>
 					</div>
 				</div>
-
-				<div class="co-chair">
-					<h2 class="subheader">Co-Chair's Letter</h2>
-
-					<div class="content">
-						<p>{@html committee.cochair_letter}</p>
-						<div class="img" />
-					</div>
-				</div>
 			</div>
-		</div>
+		</Saos>
 	{/each}
 </div>
 
@@ -207,6 +214,7 @@
 		width: 780px;
 		padding: 24px;
 		padding-bottom: 0;
+		position: relative;
 	}
 	.committee-header {
 		text-align: center;
@@ -263,5 +271,46 @@
 	}
 	.DISEC {
 		background-image: linear-gradient(to bottom, #d3bfa1, #000);
+	}
+
+	@keyframes -global-slide-right {
+		0% {
+			-webkit-transform: translateX(-500px);
+			transform: translateX(-500px);
+		}
+		100% {
+			-webkit-transform: translateX(0);
+			transform: translateX(0);
+		}
+	}
+	@keyframes -global-slide-left {
+		0% {
+			-webkit-transform: translateX(500px);
+			transform: translateX(500px);
+		}
+		100% {
+			-webkit-transform: translateX(0);
+			transform: translateX(0);
+		}
+	}
+	@keyframes -global-slide-bottom {
+		0% {
+			-webkit-transform: translateY(-100px);
+			transform: translateY(-100px);
+		}
+		100% {
+			-webkit-transform: translateY(0);
+			transform: translateY(0);
+		}
+	}
+	@keyframes -global-slide-top-qaccess {
+		0% {
+			-webkit-transform: translateY(40px);
+			transform: translateY(40px);
+		}
+		100% {
+			-webkit-transform: translateY(0);
+			transform: translateY(0);
+		}
 	}
 </style>

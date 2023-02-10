@@ -432,27 +432,6 @@
 		}
 	}
 
-	@keyframes -global-slide-right {
-		0% {
-			-webkit-transform: translateX(-1000px);
-			transform: translateX(-1000px);
-		}
-		100% {
-			-webkit-transform: translateX(0);
-			transform: translateX(0);
-		}
-	}
-	@keyframes -global-slide-left {
-		0% {
-			-webkit-transform: translateX(1000px);
-			transform: translateX(1000px);
-		}
-		100% {
-			-webkit-transform: translateX(0);
-			transform: translateX(0);
-		}
-	}
-
 	@keyframes -global-scale-up-center {
 		0% {
 			-webkit-transform: scale(0.5);
