@@ -1,4 +1,6 @@
 <script>
+	import Saos from 'saos';
+
 	let days = [
 		{
 			day: 'Friday (10th March)',
@@ -40,7 +42,9 @@
 	<title>Conference Schedule</title>
 </svelte:head>
 
-<h1 class="header">Conference <b>Timings</b></h1>
+<Saos once={true} animation="slide-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;">
+	<h1 class="header">Conference <b>Timings</b></h1>
+</Saos>
 
 <div class="timings">
 	{#each days as day}
@@ -100,6 +104,17 @@
 	@media screen and (max-width: 790px) {
 		.timings {
 			grid-template-columns: 1fr;
+		}
+	}
+
+	@keyframes -global-slide-bottom {
+		0% {
+			-webkit-transform: translateY(-100px);
+			transform: translateY(-100px);
+		}
+		100% {
+			-webkit-transform: translateY(0);
+			transform: translateY(0);
 		}
 	}
 </style>
