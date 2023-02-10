@@ -36,6 +36,7 @@
 
 	let confDate = new Date();
 
+	// TODO: Check If Conference Has Started
 	confDate.setSeconds(0);
 	confDate.setMinutes(30);
 	confDate.setHours(13);

@@ -16,7 +16,7 @@
 			cochair_photo: ''
 		},
 		{
-			name: 'UNODOC',
+			name: 'UNODC',
 			type: 2,
 			biography:
 				"The United Nations Of Drugs and Crime is a United Nations office that was created in 1997 as the Office for Drug Control and Crime Prevention by fusing the Crime Prevention and Criminal Justice Division at the United Nations Office in Vienna with the United Nations International Drug Control Program (UNDCP). The program then changed its name in 2002 to the United Nations Office on Drugs and Crime. In addition to being in charge of carrying out the UN lead program on terrorism, the United Nations Office on Narcotics and Crime (UNODC) is a global leader in the struggle against illegal drugs and transnational crime. The UNODC aims in enhancing member states' ability to combat global organized crime. It aids member governments in ratifying and putting into practice various agreements, laws, and other legal instruments designed to combat financial and organized crime in order to achieve these goals.",
@@ -249,6 +249,15 @@
 		height: 280px;
 	}
 	.GA {
-		background-image: linear-gradient(to bottom, red, blue);
+		background-image: linear-gradient(to bottom, #326198, #000);
+	}
+	.UNODC {
+		background-image: linear-gradient(to bottom, #080a68, #000);
+	}
+	.WHO {
+		background-image: linear-gradient(to bottom, #1f4e60, #000);
+	}
+	.DISEC {
+		background-image: linear-gradient(to bottom, #d3bfa1, #000);
 	}
 </style>
