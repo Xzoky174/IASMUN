@@ -36,6 +36,10 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Conference Schedule</title>
+</svelte:head>
+
 <h1 class="header">Conference <b>Timings</b></h1>
 
 <div class="timings">
