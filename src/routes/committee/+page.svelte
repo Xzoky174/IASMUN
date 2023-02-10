@@ -174,20 +174,20 @@
 	.quickaccess-links::after {
 		content: '';
 		position: absolute;
-		right: -13px;
+		right: -12px;
 		top: 0;
 		bottom: 0;
 		margin: auto 0;
-		width: 8px;
-		height: 8px;
-		border-radius: 100%;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
 		background-color: #ced4da;
-	}
-	.quickaccess-links:last-child {
-		margin-right: 0;
 	}
 	.quickaccess-links:last-child::after {
 		display: none;
+	}
+	.quickaccess-links:last-child {
+		margin-right: 0;
 	}
 
 	.committees {
