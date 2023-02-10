@@ -186,6 +186,7 @@
 	}
 	.page-links .active::after,
 	.page-links *::after {
+		opacity: 1;
 		content: '';
 		width: 100%;
 		height: 1.5px;
@@ -196,13 +197,17 @@
 		bottom: -4px;
 	}
 	.page-links *::after {
-		width: 0;
+		width: 100%;
+		opacity: 0;
+		bottom: -10px;
 		transition: 0.25s;
 		margin-left: auto;
 		margin-right: auto;
 	}
 	.page-links *:hover:after {
+		opacity: 1;
 		width: 100%;
+		bottom: -4px;
 	}
 	.menu {
 		width: 55px;
