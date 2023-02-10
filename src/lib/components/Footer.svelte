@@ -1,6 +1,6 @@
 <script lang="ts">
 	import TwitterLogo from '$lib/assets/logos/socials/Twitter.svg';
-	import FacebookLogo from '$lib/assets/logos/socials/Facebook.svg';
+	import TikTokLogo from '$lib/assets/logos/socials/Tiktok.svg';
 	import InstagramLogo from '$lib/assets/logos/socials/Instagram.svg';
 	import YoutubeLogo from '$lib/assets/logos/socials/Youtube.svg';
 
@@ -17,13 +17,13 @@
 <footer>
 	<div class="socials">
 		<Saos once={true} animation={slide_right}>
-			<a target="_blank" rel="noreferrer" href="/">
+			<a target="_blank" rel="noreferrer" href="https://www.youtube.com/@IASMUN">
 				<img class="youtube-logo" src={YoutubeLogo} alt="YouTube" />
 			</a>
 		</Saos>
 
 		<Saos once={true} animation={slide_left}>
-			<p>IASMUN</p>
+			<p>@IASMUN</p>
 		</Saos>
 
 		<Saos once={true} animation={slide_right}>
@@ -42,23 +42,23 @@
 		</Saos>
 
 		<Saos once={true} animation={slide_right}>
-			<a target="_blank" rel="noreferrer" href="/">
-				<img class="facebook-logo" src={FacebookLogo} alt="Facebook" />
+			<a target="_blank" rel="noreferrer" href="https://www.tiktok.com/@ias.mun">
+				<img class="tiktok-logo" src={TikTokLogo} alt="tiktok" />
 			</a>
 		</Saos>
 
 		<Saos once={true} animation={slide_left}>
-			<p>ias.mun</p>
+			<p>@ias.mun</p>
 		</Saos>
 
 		<Saos once={true} animation={slide_right}>
-			<a target="_blank" rel="noreferrer" href="/">
+			<a target="_blank" rel="noreferrer" href="https://twitter.com/ias_mun">
 				<img class="twitter-logo" src={TwitterLogo} alt="Twitter" />
 			</a>
 		</Saos>
 
 		<Saos once={true} animation={slide_left}>
-			<p>@ias-mun</p>
+			<p>@ias_mun</p>
 		</Saos>
 	</div>
 
@@ -127,8 +127,8 @@
 	.youtube-logo {
 		height: 38px;
 	}
-	.facebook-logo {
-		width: 30px;
+	.tiktok-logo {
+		width: 35px;
 		height: 35px;
 	}
 	.twitter-logo {

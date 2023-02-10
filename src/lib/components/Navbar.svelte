@@ -1,6 +1,6 @@
 <script lang="ts">
 	import TwitterLogo from '$lib/assets/logos/socials/Twitter.svg';
-	import FacebookLogo from '$lib/assets/logos/socials/Facebook.svg';
+	import TikTokLogo from '$lib/assets/logos/socials/Tiktok.svg';
 	import InstagramLogo from '$lib/assets/logos/socials/Instagram.svg';
 	import YoutubeLogo from '$lib/assets/logos/socials/Youtube.svg';
 
@@ -37,12 +37,21 @@
 	<div class="socials">
 		{#if ready}
 			<div class="links" in:fly={{ y: -200, duration: 1500 }}>
-				<a target="_blank" rel="noreferrer" href="/"><img src={TwitterLogo} alt="twitter" /></a>
-				<a target="_blank" rel="noreferrer" href="/"><img src={FacebookLogo} alt="facebook" /></a>
+				<a target="_blank" rel="noreferrer" href="https://twitter.com/ias_mun"
+					><img src={TwitterLogo} alt="twitter" /></a
+				>
+				<a target="_blank" rel="noreferrer" href="https://www.tiktok.com/@ias.mun"
+					><img class="tiktok-logo-img" src={TikTokLogo} alt="tiktok" /></a
+				>
 				<a target="_blank" rel="noreferrer" href="https://www.instagram.com/ias.mun">
 					<img class="instagram-logo-img" src={InstagramLogo} alt="instagram" />
 				</a>
-				<a target="_blank" rel="noreferrer" href="/" class="youtube-logo">
+				<a
+					target="_blank"
+					rel="noreferrer"
+					href="https://www.youtube.com/@IASMUN"
+					class="youtube-logo"
+				>
 					<img class="youtube-logo-img" src={YoutubeLogo} alt="youtube" />
 				</a>
 			</div>
@@ -163,6 +172,11 @@
 	.socials .links img {
 		width: 35px;
 		height: 25px;
+	}
+	.tiktok-logo-img {
+		width: 32px !important;
+		height: 32px !important;
+		margin-bottom: 2px;
 	}
 	.youtube-logo-img {
 		height: 38px !important;
