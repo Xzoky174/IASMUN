@@ -37,17 +37,19 @@
 	<div class="socials">
 		{#if ready}
 			<div class="links" in:fly={{ y: -200, duration: 1500 }}>
-				<a href="/"><img src={TwitterLogo} alt="twitter" /></a>
-				<a href="/"><img src={FacebookLogo} alt="facebook" /></a>
-				<a href="/"><img src={InstagramLogo} alt="instagram" /></a>
-				<a class="youtube-logo" href="/">
+				<a target="_blank" rel="noreferrer" href="/"><img src={TwitterLogo} alt="twitter" /></a>
+				<a target="_blank" rel="noreferrer" href="/"><img src={FacebookLogo} alt="facebook" /></a>
+				<a target="_blank" rel="noreferrer" href="https://www.instagram.com/ias.mun">
+					<img src={InstagramLogo} alt="instagram" />
+				</a>
+				<a target="_blank" rel="noreferrer" href="/" class="youtube-logo">
 					<img class="youtube-logo-img" src={YoutubeLogo} alt="youtube" />
 				</a>
 			</div>
 
 			<div class="text" in:fly={{ x: -100, duration: 1500 }}>
 				<span>#IASMUN2023</span>
-				<span class="right">email</span>
+				<span class="right">iasmun2023@gmail.com</span>
 			</div>
 		{/if}
 	</div>
@@ -88,7 +90,7 @@
 				<a
 					in:fly={showLinks ? undefined : { x: 200, duration: 3700 }}
 					class="contact"
-					href="mailto:email@gmail.com">Contact Us</a
+					href="mailto:iasmun2023@gmail.com">Contact Us</a
 				>
 			{/if}
 		</div>
@@ -138,6 +140,8 @@
 	.text {
 		display: flex;
 		justify-content: space-between;
+		gap: 16px;
+		font-size: 14px;
 	}
 	.text .right {
 		align-self: end;
@@ -146,7 +150,7 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		gap: 8px;
+		justify-content: space-around;
 	}
 	.socials .links a {
 		cursor: pointer;
