@@ -8,8 +8,8 @@
 	import IASMun from '$lib/assets/logos/IASMUN.png';
 	import Saos from 'saos';
 
-	let slide_left = 'footer-slide-left 1.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both';
-	let slide_right = 'footer-slide-right 1.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both';
+	let slide_left = 'footer-slide-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both';
+	let slide_right = 'footer-slide-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both';
 
 	export let onTopClick: any;
 </script>
@@ -17,48 +17,37 @@
 <footer>
 	<div class="socials">
 		<Saos once={true} animation={slide_right}>
-			<a target="_blank" rel="noreferrer" href="https://www.youtube.com/@IASMUN">
-				<img class="youtube-logo" src={YoutubeLogo} alt="YouTube" />
-			</a>
+			<div class="images">
+				<a target="_blank" rel="noreferrer" href="https://www.youtube.com/@IASMUN">
+					<img class="youtube-logo" src={YoutubeLogo} alt="YouTube" />
+				</a>
+
+				<a
+					target="_blank"
+					rel="noreferrer"
+					href="https://www.instagram.com/ias.mun"
+					class="instagram"
+				>
+					<img class="instagram-logo" src={InstagramLogo} alt="Instagram" />
+				</a>
+
+				<a target="_blank" rel="noreferrer" href="https://www.tiktok.com/@ias.mun">
+					<img class="tiktok-logo" src={TikTokLogo} alt="tiktok" />
+				</a>
+
+				<a target="_blank" rel="noreferrer" href="https://twitter.com/ias_mun">
+					<img class="twitter-logo" src={TwitterLogo} alt="Twitter" />
+				</a>
+			</div>
 		</Saos>
 
 		<Saos once={true} animation={slide_left}>
-			<p>@IASMUN</p>
-		</Saos>
-
-		<Saos once={true} animation={slide_right}>
-			<a
-				target="_blank"
-				rel="noreferrer"
-				href="https://www.instagram.com/ias.mun"
-				class="instagram"
-			>
-				<img class="instagram-logo" src={InstagramLogo} alt="Instagram" />
-			</a>
-		</Saos>
-
-		<Saos once={true} animation={slide_left}>
-			<p>@ias.mun</p>
-		</Saos>
-
-		<Saos once={true} animation={slide_right}>
-			<a target="_blank" rel="noreferrer" href="https://www.tiktok.com/@ias.mun">
-				<img class="tiktok-logo" src={TikTokLogo} alt="tiktok" />
-			</a>
-		</Saos>
-
-		<Saos once={true} animation={slide_left}>
-			<p>@ias.mun</p>
-		</Saos>
-
-		<Saos once={true} animation={slide_right}>
-			<a target="_blank" rel="noreferrer" href="https://twitter.com/ias_mun">
-				<img class="twitter-logo" src={TwitterLogo} alt="Twitter" />
-			</a>
-		</Saos>
-
-		<Saos once={true} animation={slide_left}>
-			<p>@ias_mun</p>
+			<div class="handles">
+				<p>@IASMUN</p>
+				<p>@ias.mun</p>
+				<p>@ias.mun</p>
+				<p>@ias_mun</p>
+			</div>
 		</Saos>
 	</div>
 
@@ -122,11 +111,26 @@
 	.socials {
 		display: grid;
 		grid-template-columns: 50px 1fr;
+		gap: 10px;
 		align-items: center;
 		justify-content: center;
 		position: absolute;
 		left: 60px;
 		margin-bottom: 28px;
+	}
+	.socials .images {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		justify-content: space-around;
+	}
+	.handles {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		justify-content: space-around;
 	}
 	.youtube-logo {
 		height: 38px;
