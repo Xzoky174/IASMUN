@@ -109,36 +109,25 @@
 </div>
 
 <div class="letters">
-	{#if width >= 1220}
-		<Saos
-			once={true}
-			animation={'scale-up-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both'}
-		>
-			<div class="container sg">
-				<h1>Secretary General's<br /><b>Welcome</b></h1>
+	<div class="container sg">
+		<Saos once={true} animation="slide-bottom 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;">
+			<h1>Secretary General's<br /><b>Welcome</b></h1>
+		</Saos>
 
-				<div class="content">
+		<div class="content">
+			<div class="text">
+				<Saos once={true} animation="fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both">
 					<p>
 						{@html sg_letter}
 					</p>
-
-					<img src={Youssef} alt="Secretary General" />
-				</div>
+				</Saos>
 			</div>
-		</Saos>
-	{:else}
-		<div class="container sg">
-			<h1>Secretary General's<br /><b>Welcome</b></h1>
 
-			<div class="content">
-				<p>
-					{@html sg_letter}
-				</p>
-
+			<Saos once={true} animation="slide-left 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;">
 				<img src={Youssef} alt="Secretary General" />
-			</div>
+			</Saos>
 		</div>
-	{/if}
+	</div>
 </div>
 
 <div class="executive-board">
@@ -299,10 +288,11 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
+		justify-content: space-between;
 		gap: 38px;
 		padding: 0 40px;
 	}
-	.content p {
+	.content .text {
 		font-size: 36px;
 		flex: 0.9;
 	}
@@ -396,6 +386,18 @@
 			opacity: 0;
 		}
 		100% {
+			opacity: 1;
+		}
+	}
+	@keyframes -global-slide-left {
+		0% {
+			-webkit-transform: translateX(200px);
+			transform: translateX(200px);
+			opacity: 0;
+		}
+		100% {
+			-webkit-transform: translateX(0);
+			transform: translateX(0);
 			opacity: 1;
 		}
 	}
