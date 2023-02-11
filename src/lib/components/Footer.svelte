@@ -82,7 +82,7 @@
 
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<div class="top" on:click={onTopClick}>
-		<Saos animation="slide-top 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both">
+		<Saos animation="slide-bottom 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both">
 			<div class="top-container">
 				<svg
 					width="25"
@@ -206,7 +206,7 @@
 			transform: translateX(0);
 		}
 	}
-	@keyframes -global-slide-top {
+	@keyframes -global-slide-bottom {
 		0% {
 			-webkit-transform: translateY(-50px);
 			transform: translateY(-50px);
