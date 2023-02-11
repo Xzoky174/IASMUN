@@ -43,7 +43,7 @@
 </svelte:head>
 
 <Saos once={true} animation="slide-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;">
-	<h1 class="header">Conference <b>Timings</b></h1>
+	<h1 class="header">Conference <b>Schedule</b></h1>
 </Saos>
 
 <div class="timings">
