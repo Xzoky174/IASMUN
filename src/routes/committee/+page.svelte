@@ -275,22 +275,26 @@
 
 	@keyframes -global-slide-right {
 		0% {
-			-webkit-transform: translateX(-500px);
-			transform: translateX(-500px);
+			-webkit-transform: translateX(-200px);
+			transform: translateX(-200px);
+			opacity: 0;
 		}
 		100% {
 			-webkit-transform: translateX(0);
 			transform: translateX(0);
+			opacity: 1;
 		}
 	}
 	@keyframes -global-slide-left {
 		0% {
-			-webkit-transform: translateX(500px);
-			transform: translateX(500px);
+			-webkit-transform: translateX(200px);
+			transform: translateX(200px);
+			opacity: 0;
 		}
 		100% {
 			-webkit-transform: translateX(0);
 			transform: translateX(0);
+			opacity: 1;
 		}
 	}
 	@keyframes -global-slide-bottom {
