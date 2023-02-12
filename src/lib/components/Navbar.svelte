@@ -92,13 +92,13 @@
 					href="/coming-soon">Guidebooks</a
 				>
 				<a
+					target="_blank"
+					rel="noreferrer"
 					in:fly={showLinks ? undefined : { x: 200, duration: 3200 }}
-					class={$page.url.pathname == '/registration' ? 'active' : ''}
-					href="/coming-soon">Registration</a
+					href="https://forms.gle/ATgKBLsg8wGfq6pn7">Registration</a
 				>
 				<a
 					in:fly={showLinks ? undefined : { x: 200, duration: 3700 }}
-					class="contact"
 					href="mailto:iasmun2023@gmail.com">Contact Us</a
 				>
 			{/if}
