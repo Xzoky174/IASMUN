@@ -9,6 +9,15 @@
 	import Line2 from '$lib/assets/lines/Vector 2.svg';
 	import Line3 from '$lib/assets/lines/Vector 3.svg';
 
+	import Aya from '$lib/assets/committee-members/Aya.jpg';
+	import Basil from '$lib/assets/committee-members/Basil.jpg';
+	import Carine from '$lib/assets/committee-members/Carine.jpg';
+	import Imran from '$lib/assets/committee-members/Imran.jpg';
+	import Jasmine from '$lib/assets/committee-members/Jasmine.jpg';
+	import Nasser from '$lib/assets/committee-members/Nasser.jpg';
+	import Rahaf from '$lib/assets/committee-members/Rahaf.jpg';
+	import Shayan from '$lib/assets/committee-members/Shayan.jpg';
+
 	let width = 0;
 
 	const committees = [
@@ -22,10 +31,10 @@
 			topics: ['Ukraine and The Global Economy', 'Palestine and Human Rights'],
 			chair_letter:
 				"Dear delegates, I welcome you to the IASMUN. My name is Nasser Mansour, and I will be the Chair of the General Assembly. I expect to meet many outspoken and intelligent folk during this event, and I am very excited to see them engaging and interacting with one another in solving the world's pressing matters. I hope everyone who participates with us leaves with a new outlook on their ideas and a smile.<br /><br />During your stay as General Assembly delegate, I will constantly ensure a steady flow of debate and a balanced turn structure that will guarantee everyone will get their chance to speak and voice their opinions. I sincerely hope you find my leadership rewarding, and I hope to witness a fruitful debate through it.",
-			chair_photo: '',
+			chair_photo: Nasser,
 			cochair_letter:
 				"Greetings, Dear MUN conference delegates,<br /><br />My name is Aya Bawaba, and I'm a junior at IAS. I am privileged to have been allowed to serve as a co-chair in the MUN hosted by my school. I sincerely hope you'll put your public speaking, research, teamwork, and critical thinking abilities to the test by attending this conference. The significance of these skills will come in handy on many occasions, and it is my role to grant you the chance to enhance them in a formal and educational environment. I have been actively involved in leadership roles in the debating and public speaking fields at every school I have ever attended, so with that being said, I assure you that with those experiences, I'll give my most outstanding effort to serve as a co-chair on this committee.<br /><br />Besides MUN, I'm also interested and enthusiastic about other activities, such as painting, playing basketball, and reading self-help books. Moreover, I fully comprehend the effort and dedication required for MUN and how uneasy one may feel at a first conference. Rest assured, you will grow to love the experience it brings and will want to participate in as many future conferences as possible. Please take this opportunity to speak your mind and make it a fun experience overall.<br /><br />I'm looking forward to chairing this year's conference and listening to all the great speeches and resolutions written by fellow delegates during this conference. I wish you all the best of luck!",
-			cochair_photo: ''
+			cochair_photo: Aya
 		},
 		{
 			class: 'DISEC',
@@ -37,10 +46,10 @@
 			topics: ['Global Weapon Disarmament', 'The Peaceful Applications of Nuclear Technology'],
 			chair_letter:
 				'My name is Shayan Abbas, and I am a Senior at IAS. I have been selected as a Chair at the IASMUN. I hope to help you navigate the complex rules and regulations in the MUN while keeping it fun for all delegates. My strongest desire is that this MUN will help you showcase your research, teamwork, debate skills, critical thinking, and public speaking abilities. As the chair, it is my responsibility that you will be able to make the most of your experience at the MUN. Moreover, I understand how privileged I am and will do my best to serve as my committee chair. I wish you all the best of luck!',
-			chair_photo: '',
+			chair_photo: Shayan,
 			cochair_letter:
 				"My name is Rahaf Ahmed, and I am a junior at IAS. I am thrilled to have been appointed co-chair of my school's model United Nations. By participating in this event, you will be able to showcase your most robust research, teamwork, debate, critical thinking, and public speaking abilities. As co-chair, I am responsible for encouraging all delegates to do their best and make the most of this experience, as it can enhance their self-confidence and public speaking skills. Taking part in model UN brings me great joy and excitement. It provides me with valuable experience and skills for my desired career path. I want to be a lawyer. As important as preparation is, the ability to think on your feet is equally essential when defending your client. Model UN can teach you both these skills. Although Model United Nations is a great learning experience, and I encourage you to take it very seriously, some may initially feel nervous or uneasy. However, I assure you that it is much fun and that you will want to participate again after your first time. Moreover, I understand how privileged and lucky I am, and I will do my best to serve as a co-chair on my committee. I wish you all the best of luck!",
-			cochair_photo: ''
+			cochair_photo: Rahaf
 		},
 		{
 			class: 'WHO',
@@ -52,10 +61,10 @@
 			topics: ['Drought and Food Shortage in Africa', 'Issues with World Population'],
 			chair_letter:
 				"Having prior MUN experience with a 'Best Position Paper' award, I profess to be able to guide my delegates through the incredible experience as smoothly as possible. My name is Carine Chamas, and I am the World Health Organization Committee chair. I have long been interested in politics and its effect on health-related fields. I want to make the first-ever IASMUN an extraordinary success for the books.",
-			chair_photo: '',
+			chair_photo: Carine,
 			cochair_letter:
 				"With the exciting news, I'll be taking part in this year's MUN with my team as the co-chair. I had a positive experience with MUN in my previous high school, so I am well-equipped and qualified for the role of co-chair. We want to ensure that the delegates feel safe and firm to exchange ideas and observations of their assigned countries during the debates in a constructive respectful manner and not behave in a way that will destroy the competitive spirit of MUN or make it seem like a hostile environment. And last but not least, best of luck to everyone involved for IAS's 2023 MUN!",
-			cochair_photo: ''
+			cochair_photo: Imran
 		},
 		{
 			class: 'UNODC',
@@ -71,10 +80,10 @@
 			],
 			chair_letter:
 				"Dear distinguished delegates, it is my pleasure to welcome you to the 1st annual IASMUN 2023 on the committee of the United Nations Of Drugs and Crime. My name is Jasmine, I'm 17 years old and a senior in IAS, and I have been allowed to be your chair in this year's UNODC committee. I'm very passionate about debating and taking stances, and I enjoy reading and partaking in different outdoor activities. As a former Delegate on this committee, I have accumulated many additional tips and tricks that I can give to all your delegates participating this year.<br /><br />I understand the pressure of preparing and getting ready for such challenging conferences. However, these debates and discussions can help each exchange points of view with other delegates and expand their knowledge in certain aspects. My goal this year is to guide and ensure that each delegate reaches their fullest potential in researching and debating. I wish everyone a pleasant experience this year, and I can't wait to hear from and talk to you, delegates!",
-			chair_photo: '',
+			chair_photo: Jasmine,
 			cochair_letter:
 				"My name is Basil Adan. I am from Jordan, and I am 16 years of age. I'm currently in my junior year at International Academic School. I have allocated many significant achievements throughout my time in lAS, like ranking first academically from grade 10, Volunteering in different activities to help the school, Joining competitions such as the mental math competition and the robotics club competition, and many other various things. Regarding being honored with the role of co-chair in this year's IAS Model United Nations (MUN), I will give my utmost best in providing you with the appropriate requirements and rules. In addition, I will make sure to dedicate all my hard work to preserve the smooth flow of the debates while at the same time ensuring that all rules be complied with to keep this fair and an opportunity for everyone to shine in this significant event.",
-			cochair_photo: ''
+			cochair_photo: Basil
 		}
 	];
 </script>
@@ -129,19 +138,21 @@
 						<li>{topic}</li>
 					{/each}
 				</ol>
+
 				<div class="letters">
 					<div class="chair">
 						<h2 class="subheader">Chair's Letter</h2>
 						<div class="content">
 							<p>{@html committee.chair_letter}</p>
-							<div class="img" />
+							<img class="img" src={committee.chair_photo} alt="" />
 						</div>
 					</div>
+
 					<div class="co-chair">
 						<h2 class="subheader">Co-Chair's Letter</h2>
 						<div class="content">
 							<p>{@html committee.cochair_letter}</p>
-							<div class="img" />
+							<img class="img" src={committee.cochair_photo} alt="" />
 						</div>
 					</div>
 				</div>
@@ -288,8 +299,6 @@
 	.letters {
 		margin-top: 16px;
 		background-image: linear-gradient(to bottom, grey, #000);
-	}
-	.letters > * {
 		padding: 8px 16px;
 	}
 	.letters .subheader {
@@ -301,17 +310,17 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		gap: 18px;
+		justify-content: space-between;
+		gap: 48px;
 	}
 	.co-chair .content {
 		flex-direction: row-reverse;
 	}
 	.letters p {
-		flex: 0.75;
+		flex: 0.85;
 	}
 	.letters .img {
-		flex: 0.35;
-		background-color: #2980b9;
+		flex: 0.25;
 		height: 380px;
 	}
 	.GA {
@@ -390,8 +399,9 @@
 			flex-direction: column;
 		}
 		.letters .img {
-			width: 180px;
-			height: 280px;
+			flex: 1;
+			width: 220px;
+			height: 180px;
 		}
 	}
 	@media screen and (max-width: 470px) {
