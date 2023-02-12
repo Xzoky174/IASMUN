@@ -548,4 +548,22 @@
 			gap: 24px;
 		}
 	}
+
+	@media screen and (max-height: 530px) {
+		.IASMUN-pic {
+			height: 400px;
+			margin-top: 28px;
+		}
+	}
+	@media screen and (max-height: 420px) {
+		.IASMUN-pic {
+			height: 300px;
+			margin-top: 28px;
+		}
+	}
+	@media screen and (max-height: 370px) {
+		.IAS-pic {
+			height: 400px;
+		}
+	}
 </style>
