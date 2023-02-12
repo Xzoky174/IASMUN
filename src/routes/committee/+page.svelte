@@ -1,6 +1,16 @@
 <script lang="ts">
 	import Saos from 'saos';
 
+	import Blob1 from '$lib/assets/blobs/Vector 1.svg';
+	import Blob2 from '$lib/assets/blobs/Vector 2.svg';
+	import Blob3 from '$lib/assets/blobs/Vector 3.svg';
+
+	import Line1 from '$lib/assets/lines/Vector 1.svg';
+	import Line2 from '$lib/assets/lines/Vector 2.svg';
+	import Line3 from '$lib/assets/lines/Vector 3.svg';
+
+	let width = 0;
+
 	const committees = [
 		{
 			name: 'GA',
@@ -73,6 +83,8 @@
 	<title>Committees</title>
 </svelte:head>
 
+<svelte:window bind:innerWidth={width} />
+
 <Saos once={true} animation="slide-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;">
 	<h1 class="header">Our <b>Committees</b></h1>
 </Saos>
@@ -85,13 +97,18 @@
 	</div>
 </Saos>
 
+<img class="lines line3" src={Line3} alt="" />
+<img class="blobs blob1" src={Blob1} alt="" />
+
 <div class="committees">
 	{#each committees as committee, index}
 		<Saos
 			once={true}
-			animation={index % 2 == 0
-				? 'slide-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;'
-				: 'slide-left 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;'}
+			animation={width >= 840
+				? index % 2 == 0
+					? 'slide-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;'
+					: 'slide-left 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;'
+				: undefined}
 		>
 			<div class={`committee ${committee.name}`} id={committee.name}>
 				<div class="committee-header">
@@ -141,6 +158,12 @@
 			</div>
 		</Saos>
 	{/each}
+
+	<img class="lines line2" src={Line2} alt="" />
+	<img class="blobs blob2" src={Blob2} alt="" />
+
+	<img class="lines line1" src={Line1} alt="" />
+	<img class="blobs blob3" src={Blob3} alt="" />
 </div>
 
 <style>
@@ -157,6 +180,41 @@
 
 	* {
 		font-family: 'Montserrat', sans-serif;
+	}
+
+	.lines,
+	.blobs {
+		position: absolute;
+		z-index: -1;
+	}
+	.line3 {
+		top: 0;
+		left: -120px;
+		height: 900px;
+	}
+	.blob1 {
+		top: 300px;
+		left: -120px;
+	}
+
+	.line2 {
+		right: 0;
+		transform: rotate(25deg);
+		top: 1200px;
+		height: 1300px;
+	}
+	.blob2 {
+		top: 2300px;
+		right: 0;
+	}
+
+	.line1 {
+		left: 0;
+		top: 3500px;
+	}
+	.blob3 {
+		left: -100px;
+		top: 4000px;
 	}
 
 	.header {
@@ -315,6 +373,34 @@
 		100% {
 			-webkit-transform: translateY(0);
 			transform: translateY(0);
+		}
+	}
+
+	@media screen and (max-width: 840px) {
+		.committee {
+			width: calc(100vw - 60px);
+		}
+		.lines,
+		.blobs {
+			display: none;
+		}
+		.line3 {
+			display: block;
+			left: -320px;
+		}
+	}
+	@media screen and (max-width: 700px) {
+		.letters .content {
+			flex-direction: column;
+		}
+		.letters .img {
+			width: 180px;
+			height: 280px;
+		}
+	}
+	@media screen and (max-width: 470px) {
+		.line3 {
+			display: none;
 		}
 	}
 </style>
