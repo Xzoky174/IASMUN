@@ -270,20 +270,20 @@
 		margin-bottom: 24px;
 	}
 	.subheader {
-		font-size: 20px;
+		font-size: 26px;
 		font-weight: 700;
 		margin-bottom: 0;
 	}
 	.desc {
 		margin-top: 4px;
-		font-size: 24px;
+		font-size: 22px;
 	}
 	.topics {
 		margin-bottom: 4px;
 	}
 	.topics li {
 		margin-bottom: 8px;
-		font-size: 24px;
+		font-size: 22px;
 	}
 	.letters {
 		margin-top: 16px;
@@ -295,10 +295,9 @@
 	.letters .subheader {
 		text-align: center;
 		margin-bottom: 12px;
-		font-size: 28px;
 	}
 	.letters .content {
-		font-size: 24px;
+		font-size: 22px;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
