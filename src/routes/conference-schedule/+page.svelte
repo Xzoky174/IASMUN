@@ -1,6 +1,8 @@
 <script>
 	import Saos from 'saos';
 
+	import Line3 from '$lib/assets/lines/Vector 3.svg';
+
 	let days = [
 		{
 			day: 'Friday (10th March)',
@@ -31,7 +33,7 @@
 				{ start: '10am', end: '12pm', desc: 'Fifth Committee Session' },
 				{ start: '12pm', end: '1:30pm', desc: 'Break' },
 				{ start: '1:30pm', end: '3:30pm', desc: 'Suprise' },
-				{ start: '3:30pm', end: '4:30pm', desc: 'Suprise' },
+				{ start: '3:30pm', end: '4:30pm', desc: 'Suprise (2)' },
 				{ start: '4:30pm', end: '6pm', desc: 'Awards Ceremony' }
 			]
 		}
@@ -46,6 +48,7 @@
 	<h1 class="header">Conference <b>Schedule</b></h1>
 </Saos>
 
+<img class="lines line3" src={Line3} alt="" />
 <div class="timings">
 	{#each days as day}
 		<div class={`container ${day.day}`}>
@@ -67,6 +70,15 @@
 		text-align: center;
 	}
 
+	.lines {
+		position: absolute;
+		z-index: -1;
+	}
+	.line3 {
+		top: 0;
+		left: 0;
+	}
+
 	.header {
 		font-weight: 400;
 		text-align: center;
@@ -78,10 +90,14 @@
 		border-collapse: collapse;
 		border: 2px dashed #000;
 		border-bottom: none;
-		border-right: none;
 	}
 	.container:first-child {
 		border-left: none;
+		border-right: 1px;
+	}
+	.container:last-child {
+		border-right: none;
+		border-left: 1px;
 	}
 	.timings {
 		display: grid;
