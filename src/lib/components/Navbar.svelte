@@ -108,7 +108,7 @@
 	{#if width < 1150}
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<img
-			in:fade={{ duration: 600 }}
+			in:fade={{ duration: 1200 }}
 			bind:this={menu}
 			class="menu"
 			on:click={() => (showLinks = !showLinks)}
@@ -236,6 +236,7 @@
 		width: 55px;
 		height: 35px;
 		cursor: pointer;
+		z-index: 99;
 	}
 
 	@media screen and (max-width: 1150px) {
