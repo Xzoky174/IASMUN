@@ -71,7 +71,7 @@
 <div class="hero">
 	<Saos once={true} animation="fade-in 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both">
 		<p class="countdown">
-			<span class="header">Next Conference:</span>{countDownDate || 'Loading...'}<br />(10th March
+			<span class="header">Conference Date:</span>{countDownDate || 'Loading...'}<br />(10th March
 			2023)
 		</p>
 	</Saos>
@@ -325,8 +325,8 @@
 		gap: 50px;
 	}
 	.container > .img {
-		height: 180px;
-		width: 150px;
+		height: 200px;
+		width: 170px;
 		background-color: #326198;
 		margin-bottom: 12px;
 	}
