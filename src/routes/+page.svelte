@@ -41,8 +41,9 @@
 	confDate.setMinutes(30);
 	confDate.setHours(13);
 	confDate.setDate(10);
-	confDate.setMonth(3);
+	confDate.setMonth(2);
 	confDate.setFullYear(2023);
+	console.log(confDate);
 
 	let countDownDate: any = null;
 
@@ -50,7 +51,7 @@
 		countDownDate = countdown(
 			null,
 			confDate,
-			countdown.MONTHS | countdown.DAYS | countdown.HOURS
+			countdown.MONTHS | countdown.DAYS | countdown.HOURS | countdown.MINUTES
 		).toString();
 	}, 1000);
 </script>
@@ -71,8 +72,9 @@
 <div class="hero">
 	<Saos once={true} animation="fade-in 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both">
 		<p class="countdown">
-			<span class="header">Conference Date:</span>{countDownDate || 'Loading...'}<br />(10th March
-			2023)
+			<span class="header">Conference Date:</span>{countDownDate || 'Loading...'}<br /><i
+				>10-12th March</i
+			>
 		</p>
 	</Saos>
 
