@@ -29,38 +29,35 @@
 
 	import Saos from 'saos';
 
-	import countdown from 'countdown';
+	// const updateCountDown = () => {
+	// 	countDownDate = Math.round(confDate.valueOf() - currDate.valueOf()) / (1000 * 60);
+	// };
 
 	let ready = false;
 	onMount(() => {
 		ready = true;
 		width = window.innerWidth;
+
+		// updateCountDown();
 	});
 
 	let width: number;
 
-	let confDate = new Date();
+	// let currDate = new Date();
+	// let confDate = new Date();
 
-	// TODO: Check If Conference Has Started
-	confDate.setSeconds(0);
-	confDate.setMinutes(30);
-	confDate.setHours(13);
-	confDate.setDate(10);
-	confDate.setMonth(2);
-	confDate.setFullYear(2023);
+	// confDate.setSeconds(0);
+	// confDate.setMinutes(30);
+	// confDate.setHours(13);
+	// confDate.setDate(10);
+	// confDate.setMonth(2);
+	// confDate.setFullYear(2023);
 
-	let countDownDate: any = null;
+	// console.log();
 
-	const updateCountDown = () => {
-		countDownDate = countdown(
-			null,
-			confDate,
-			countdown.MONTHS | countdown.DAYS | countdown.HOURS | countdown.MINUTES
-		).toString();
-	};
+	// let countDownDate: any = null;
 
-	setInterval(updateCountDown, 60000);
-	updateCountDown();
+	// setInterval(updateCountDown, 60000);
 </script>
 
 <svelte:window bind:innerWidth={width} />
@@ -77,13 +74,12 @@
 </div>
 
 <div class="hero">
-	<Saos once={true} animation="fade-in 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both">
+	<!-- <Saos once={true} animation="fade-in 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both">
 		<p class="countdown">
-			<span class="header">Conference Date:</span>{countDownDate || 'Loading...'}<br /><i
-				>10-12th March</i
-			>
+			<span class="header">Conference Date:</span>{countDownDate * 60 * 24}, {countDownDate * 60}, {countDownDate}<br
+			/><i>10-12th March</i>
 		</p>
-	</Saos>
+	</Saos> -->
 
 	<Saos once={true} animation="scale-up-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both">
 		<div class="container theme">
