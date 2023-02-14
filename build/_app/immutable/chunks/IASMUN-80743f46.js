@@ -1,3 +1,0 @@
-import{X as y}from"./index-71e34874.js";function l(o){const t=o-1;return t*t*t+1}function $(o,{delay:t=0,duration:n=400,easing:s=y}={}){const r=+getComputedStyle(o).opacity;return{delay:t,duration:n,easing:s,css:a=>`opacity: ${a*r}`}}function g(o,{delay:t=0,duration:n=400,easing:s=l,x:r=0,y:a=0,opacity:i=0}={}){const c=getComputedStyle(o),e=+c.opacity,p=c.transform==="none"?"":c.transform,u=e*(1-i);return{delay:t,duration:n,easing:s,css:(f,m)=>`
-			transform: ${p} translate(${(1-f)*r}px, ${(1-f)*a}px);
-			opacity: ${e-u*m}`}}const S=""+new URL("../assets/IASMUN-2c6a400c.png",import.meta.url).href;export{S as I,$ as a,g as f};
