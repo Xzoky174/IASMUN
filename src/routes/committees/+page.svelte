@@ -9,6 +9,15 @@
 	import Line2 from '$lib/assets/lines/Vector 2.svg';
 	import Line3 from '$lib/assets/lines/Vector 3.svg';
 
+	import Shape1 from '$lib/assets/shapes/Vector 1.svg';
+	import Shape2 from '$lib/assets/shapes/Vector 2.svg';
+	import Shape3 from '$lib/assets/shapes/Vector 3.svg';
+	import Shape4 from '$lib/assets/shapes/Vector 4.svg';
+	import Shape5 from '$lib/assets/shapes/Vector 5.svg';
+	import Shape6 from '$lib/assets/shapes/Vector 6.svg';
+	import Shape7 from '$lib/assets/shapes/Vector 7.svg';
+	import Shape8 from '$lib/assets/shapes/Vector 8.svg';
+
 	import Aya from '$lib/assets/committee-members/Aya.jpg';
 	import Basil from '$lib/assets/committee-members/Basil.jpg';
 	import Carine from '$lib/assets/committee-members/Carine.jpg';
@@ -94,6 +103,9 @@
 
 <svelte:window bind:innerWidth={width} />
 
+<img class="shapes shape1" src={Shape1} alt="" />
+<img class="shapes shape2" src={Shape7} alt="" />
+
 <Saos once={true} animation="slide-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;">
 	<h1 class="header"><b>Committees</b></h1>
 </Saos>
@@ -158,6 +170,13 @@
 				</div>
 			</div>
 		</Saos>
+
+		<img class="shapes shape3" src={Shape6} alt="" />
+		<img class="shapes shape4" src={Shape8} alt="" />
+		<img class="shapes shape5" src={Shape2} alt="" />
+		<img class="shapes shape6" src={Shape3} alt="" />
+		<img class="shapes shape7" src={Shape4} alt="" />
+		<img class="shapes shape8" src={Shape5} alt="" />
 	{/each}
 
 	<img class="lines line2" src={Line2} alt="" />
@@ -184,7 +203,8 @@
 	}
 
 	.lines,
-	.blobs {
+	.blobs,
+	.shapes {
 		position: absolute;
 		z-index: -1;
 	}
@@ -216,6 +236,50 @@
 	.blob3 {
 		left: -100px;
 		top: 4000px;
+	}
+
+	.shapes {
+		width: 100px;
+		height: 100px;
+	}
+	.shape1 {
+		top: 180px;
+		right: 20px;
+		transform: rotate(50deg);
+		width: 200px;
+		height: 130px;
+	}
+	.shape2 {
+		top: 120px;
+		left: 40px;
+		transform: rotate(30deg);
+		width: 140px;
+	}
+	.shape3 {
+		top: 400px;
+		right: 5px;
+		transform: rotate(40deg);
+	}
+	.shape4 {
+		top: 1000px;
+		left: 24px;
+	}
+	.shape5 {
+		top: 1900px;
+		left: 0;
+		transform: rotate(40deg);
+	}
+	.shape6 {
+		top: 3000px;
+		left: 0;
+	}
+	.shape7 {
+		top: 3800px;
+		right: 0;
+	}
+	.shape8 {
+		top: 5000px;
+		right: 0;
 	}
 
 	.header {
@@ -266,6 +330,8 @@
 		grid-template-columns: 1fr;
 		gap: 16px;
 		margin-bottom: 36px;
+		position: relative;
+		overflow: visible;
 	}
 	.committee {
 		width: calc(100vw - 300px) !important;

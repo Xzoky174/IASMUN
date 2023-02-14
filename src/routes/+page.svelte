@@ -19,6 +19,14 @@
 	import Blob2 from '$lib/assets/blobs/Vector 2.svg';
 	import Blob3 from '$lib/assets/blobs/Vector 3.svg';
 
+	import Shape1 from '$lib/assets/shapes/Vector 1.svg';
+	import Shape2 from '$lib/assets/shapes/Vector 2.svg';
+	import Shape3 from '$lib/assets/shapes/Vector 3.svg';
+	import Shape4 from '$lib/assets/shapes/Vector 4.svg';
+	import Shape6 from '$lib/assets/shapes/Vector 6.svg';
+	import Shape7 from '$lib/assets/shapes/Vector 7.svg';
+	import Shape8 from '$lib/assets/shapes/Vector 8.svg';
+
 	import Saos from 'saos';
 
 	import countdown from 'countdown';
@@ -31,9 +39,6 @@
 
 	let width: number;
 
-	const sg_letter =
-		'Dear venerable delegates, advisors, and organizers,<br /><br />I am delighted to welcome you to International Academic School Model United Nations (IASMUN) 2023, our first annual conference at International Academic School. It is an honour to be the founder and Secretary-General of IASMUN 2023!<br /><br />IASMUN has been initiated for all students across the region for diversity, competitiveness, and the concoction of creative ideas. IASMUN will commence with four distinct committees for the delegates to choose between based on their interest and level.<br /><br />IASMUN possesses a superior set of members with various perks and a remarkable skill set. IASMUN grants students the opportunity to enhance their research and debating skills, confidence, extemporization, and writing and speaking abilities through various committees and issues. It provides all its participants to display their inner talents and flourish them. Furthermore, IASMUN fundamentally prepares its participants for university and the future as a whole.<br /><br />We highly encourage you to participate in an enlightening, pleasurable, and memorable occasion that will remarkably transfigure and inspire everyone. IASMUN strives to reinforce and develop all required skills that create an exceptional ambassador!<br /><br />Best regards,<br /><br />Youssef Ashraf Hussein Zaki';
-
 	let confDate = new Date();
 
 	// TODO: Check If Conference Has Started
@@ -43,17 +48,19 @@
 	confDate.setDate(10);
 	confDate.setMonth(2);
 	confDate.setFullYear(2023);
-	console.log(confDate);
 
 	let countDownDate: any = null;
 
-	setInterval(() => {
+	const updateCountDown = () => {
 		countDownDate = countdown(
 			null,
 			confDate,
 			countdown.MONTHS | countdown.DAYS | countdown.HOURS | countdown.MINUTES
 		).toString();
-	}, 1000);
+	};
+
+	setInterval(updateCountDown, 60000);
+	updateCountDown();
 </script>
 
 <svelte:window bind:innerWidth={width} />
@@ -104,6 +111,11 @@
 		</div>
 	</Saos>
 
+	<img class="shapes shape1" src={Shape1} alt="" />
+	<img class="shapes shape2" src={Shape2} alt="" />
+	<img class="shapes shape3" src={Shape7} alt="" />
+	<img class="shapes shape4" src={Shape6} alt="" />
+
 	<img class="lines line1" src={Line1} alt="" />
 	<img class="blobs blob1" src={Blob1} alt="" />
 
@@ -121,7 +133,22 @@
 			<div class="text">
 				<Saos once={true} animation="fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both">
 					<p>
-						{@html sg_letter}
+						Dear venerable delegates, advisors, and organizers,<br /><br />I am delighted to welcome
+						you to International Academic School Model United Nations (IASMUN) 2023, our first
+						annual conference at International Academic School. It is an honour to be the founder
+						and Secretary-General of IASMUN 2023!<br /><br />IASMUN has been initiated for all
+						students across the region for diversity, competitiveness, and the concoction of
+						creative ideas. IASMUN will commence with four distinct committees for the delegates to
+						choose between based on their interest and level.<br /><br />IASMUN possesses a superior
+						set of members with various perks and a remarkable skill set. IASMUN grants students the
+						opportunity to enhance their research and debating skills, confidence, extemporization,
+						and writing and speaking abilities through various committees and issues. It provides
+						all its participants to display their inner talents and flourish them. Furthermore,
+						IASMUN fundamentally prepares its participants for university and the future as a whole.<br
+						/><br />We highly encourage you to participate in an enlightening, pleasurable, and
+						memorable occasion that will remarkably transfigure and inspire everyone. IASMUN strives
+						to reinforce and develop all required skills that create an exceptional ambassador!<br
+						/><br />Best regards,<br /><br />Youssef Ashraf Hussein Zaki
 					</p>
 				</Saos>
 			</div>
@@ -131,6 +158,8 @@
 			</Saos>
 		</div>
 	</div>
+
+	<img class="shapes shape5" src={Shape3} alt="" />
 </div>
 
 <div class="executive-board">
@@ -146,7 +175,7 @@
 		</div>
 	</Saos>
 
-	<Saos once={true} animation="slide-top 1.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both">
+	<Saos once={true} animation="slide-top 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both">
 		<div class="board">
 			<div class="container">
 				<img class="img" src={Maya} alt="Head of PR" />
@@ -170,6 +199,9 @@
 			</div>
 		</div>
 	</Saos>
+
+	<img class="shapes shape6" src={Shape4} alt="" />
+	<img class="shapes shape7" src={Shape8} alt="" />
 
 	<img class="lines line3" src={Line3} alt="" />
 	<img class="blobs blob3" src={Blob3} alt="" />
@@ -268,6 +300,8 @@
 		display: grid;
 		place-items: center;
 		gap: 45px;
+		position: relative;
+		overflow: visible;
 	}
 	.letters .container {
 		width: 1200px;
@@ -352,7 +386,8 @@
 	}
 
 	.lines,
-	.blobs {
+	.blobs,
+	.shapes {
 		position: absolute;
 		z-index: -1;
 	}
@@ -382,6 +417,51 @@
 	.blob3 {
 		bottom: 56px;
 		left: -48px;
+	}
+
+	.shapes {
+		width: 80px;
+		height: 80px;
+	}
+	.shape1 {
+		transform: rotate(40deg);
+		top: 15px;
+		left: 12px;
+	}
+	.shape2 {
+		top: 48px;
+		right: 28px;
+		width: 120px;
+		height: 120px;
+	}
+	.shape3 {
+		bottom: 265px;
+		right: 80px;
+		transform: rotate(30deg);
+		width: 160px;
+		height: 120px;
+	}
+	.shape4 {
+		left: 300px;
+		top: 400px;
+		height: 140px;
+		width: 140px;
+	}
+	.shape5 {
+		top: 0;
+		left: 40px;
+		width: 160px;
+		height: 160px;
+	}
+	.shape6 {
+		top: -40px;
+		right: 80px;
+	}
+	.shape7 {
+		top: 200px;
+		right: 80px;
+		width: 160px;
+		height: 160px;
 	}
 
 	@keyframes -global-fade-in {

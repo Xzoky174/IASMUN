@@ -78,8 +78,8 @@
 				>
 				<a
 					in:fly={showLinks ? undefined : { x: 200, duration: 1700 }}
-					class={$page.url.pathname == '/committee' ? 'active' : ''}
-					href="/committee">Committee</a
+					class={$page.url.pathname == '/committees' ? 'active' : ''}
+					href="/committees">Committees</a
 				>
 				<a
 					in:fly={showLinks ? undefined : { x: 200, duration: 2200 }}
