@@ -154,6 +154,11 @@
 			width: 300px;
 		}
 	}
+	@media screen and (max-width: 510px) {
+		.shape1 {
+			top: 280px;
+		}
+	}
 	@media screen and (max-width: 300px) {
 		.line3 {
 			width: 200px;

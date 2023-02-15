@@ -637,6 +637,9 @@
 			grid-template-columns: repeat(1, 1fr) !important;
 			gap: 24px;
 		}
+		.shape6 {
+			right: 0;
+		}
 	}
 
 	@media screen and (max-height: 530px) {
