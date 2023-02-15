@@ -1,6 +1,15 @@
 <script>
 	import Saos from 'saos';
 
+	import Shape1 from '$lib/assets/shapes/Vector 1.svg';
+	import Shape2 from '$lib/assets/shapes/Vector 2.svg';
+	import Shape3 from '$lib/assets/shapes/Vector 3.svg';
+	import Shape4 from '$lib/assets/shapes/Vector 4.svg';
+	import Shape5 from '$lib/assets/shapes/Vector 5.svg';
+	import Shape6 from '$lib/assets/shapes/Vector 6.svg';
+	import Shape7 from '$lib/assets/shapes/Vector 7.svg';
+	import Shape8 from '$lib/assets/shapes/Vector 8.svg';
+
 	import Line3 from '$lib/assets/lines/Vector 3.svg';
 
 	let days = [
@@ -43,6 +52,9 @@
 	<title>Conference Schedule</title>
 </svelte:head>
 
+<img class="shapes shape1" src={Shape1} alt="" />
+<img class="shapes shape2" src={Shape8} alt="" />
+
 <Saos once={true} animation="slide-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;">
 	<h1 class="header">Conference <b>Schedule</b></h1>
 </Saos>
@@ -69,13 +81,27 @@
 		text-align: center;
 	}
 
-	.lines {
+	.lines,
+	.shapes {
 		position: absolute;
 		z-index: -1;
 	}
 	.line3 {
 		top: 0;
 		left: 0;
+	}
+
+	.shape1 {
+		right: 18px;
+		top: 105px;
+		width: 80px;
+		height: 80px;
+	}
+	.shape2 {
+		left: 20px;
+		top: 125px;
+		width: 80px;
+		height: 80px;
 	}
 
 	.header {
