@@ -33,9 +33,9 @@
 			day: 'Sunday (12th March)',
 			timing: [
 				{ start: '9:20am', end: '10am', desc: 'Arrival' },
-				{ start: '10am', end: '12pm', desc: 'Fifth Committee Session' },
-				{ start: '12pm', end: '1:30pm', desc: 'Break' },
-				{ start: '1:30pm', end: '4:30pm', desc: 'Sixth Committee Session' },
+				{ start: '10am', end: '12:30pm', desc: 'Fifth Committee Session' },
+				{ start: '12:30pm', end: '2pm', desc: 'Break' },
+				{ start: '2pm', end: '4:30pm', desc: 'Sixth Committee Session' },
 				{ start: '4:30pm', end: '6pm', desc: 'Awards Ceremony' }
 			]
 		}
