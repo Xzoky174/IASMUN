@@ -2,12 +2,6 @@
 	import Saos from 'saos';
 
 	import Shape1 from '$lib/assets/shapes/Vector 1.svg';
-	import Shape2 from '$lib/assets/shapes/Vector 2.svg';
-	import Shape3 from '$lib/assets/shapes/Vector 3.svg';
-	import Shape4 from '$lib/assets/shapes/Vector 4.svg';
-	import Shape5 from '$lib/assets/shapes/Vector 5.svg';
-	import Shape6 from '$lib/assets/shapes/Vector 6.svg';
-	import Shape7 from '$lib/assets/shapes/Vector 7.svg';
 	import Shape8 from '$lib/assets/shapes/Vector 8.svg';
 
 	import Line3 from '$lib/assets/lines/Vector 3.svg';

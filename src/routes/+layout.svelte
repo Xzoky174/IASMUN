@@ -47,6 +47,6 @@
 <style>
 	.main {
 		height: 100%;
-		padding-top: 85px;
+		padding-top: 97px;
 	}
 </style>

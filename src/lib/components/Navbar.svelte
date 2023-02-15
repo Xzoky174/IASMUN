@@ -89,7 +89,7 @@
 				<a
 					in:fly={showLinks ? undefined : { x: 200, duration: 2700 }}
 					class={$page.url.pathname == '/guidebooks' ? 'active' : ''}
-					href="/coming-soon">Guidebooks</a
+					href="/guidebooks">Guidebooks</a
 				>
 				<a
 					target="_blank"
