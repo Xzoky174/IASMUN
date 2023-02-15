@@ -33,6 +33,8 @@
 	// 	countDownDate = Math.round(confDate.valueOf() - currDate.valueOf()) / (1000 * 60);
 	// };
 
+	console.log(new Date());
+
 	let ready = false;
 	onMount(() => {
 		ready = true;
