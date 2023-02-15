@@ -32,8 +32,7 @@
 				{ start: '9:20am', end: '10am', desc: 'Arrival' },
 				{ start: '10am', end: '12pm', desc: 'Fifth Committee Session' },
 				{ start: '12pm', end: '1:30pm', desc: 'Break' },
-				{ start: '1:30pm', end: '3:30pm', desc: 'Suprise' },
-				{ start: '3:30pm', end: '4:30pm', desc: 'Suprise (2)' },
+				{ start: '1:30pm', end: '4:30pm', desc: 'Sixth Committee Session' },
 				{ start: '4:30pm', end: '6pm', desc: 'Awards Ceremony' }
 			]
 		}
