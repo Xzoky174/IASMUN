@@ -189,7 +189,7 @@
 				<p>Daniel Obeid <br /> <b>Head of Logistics</b></p>
 			</div>
 			<div class="container">
-				<img class="img" src={Sama} alt="Head of PR" />
+				<img class="img sama" src={Sama} alt="Head of PR" />
 
 				<p>Samaa Hamdy Afifi <br /> <b>Chief Advisor</b></p>
 			</div>
@@ -354,13 +354,17 @@
 	.board {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		gap: 50px;
+		align-content: space-between;
+		gap: 20px;
 	}
 	.container > .img {
 		height: 200px;
 		width: 170px;
 		background-color: #326198;
 		margin-bottom: 12px;
+	}
+	.container > .sama {
+		width: 140px !important;
 	}
 	.container > p {
 		font-size: 20px;
@@ -535,6 +539,12 @@
 		}
 	}
 
+	@media screen and (max-width: 850px) {
+		.line3 {
+			top: -60px;
+		}
+	}
+
 	@media screen and (max-width: 1220px) {
 		.letters .container {
 			width: calc(100% - 20px);
@@ -548,7 +558,7 @@
 			gap: 48px;
 		}
 		.content img {
-			width: 350px;
+			width: 310px;
 			height: 370px;
 			background-color: #326198;
 			flex: auto;
@@ -601,7 +611,7 @@
 			display: none;
 		}
 		.blob3 {
-			top: 0;
+			top: 60px;
 		}
 	}
 

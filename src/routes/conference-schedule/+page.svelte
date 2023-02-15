@@ -100,6 +100,7 @@
 		border-left: 1px;
 	}
 	.timings {
+		width: 100vw;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		place-items: center;
@@ -120,6 +121,18 @@
 	@media screen and (max-width: 790px) {
 		.timings {
 			grid-template-columns: 1fr;
+		}
+	}
+
+	@media screen and (max-width: 440px) {
+		.line3 {
+			width: 300px;
+		}
+	}
+	@media screen and (max-width: 300px) {
+		.line3 {
+			width: 200px;
+			height: 400px;
 		}
 	}
 
