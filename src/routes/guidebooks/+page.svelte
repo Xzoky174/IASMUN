@@ -14,13 +14,17 @@
 
 <div class="wrapper">
 	<div class="container">
-		<div>
+		<div class="main-guidebook">
 			<Saos animation="slide-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both" once={true}>
-				<h1 class="header">IASMUN <b>Guidebook</b></h1>
+				<h1 class="header">Delegate <b>Handbook</b></h1>
 			</Saos>
 
-			<Saos animation="slide-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both" once={true}>
-				<h1 class="coming-soon">Coming Soon...</h1>
+			<Saos animation="slide-right 1.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both" once={true}>
+				<a
+					class="handbook-link"
+					data-sveltekit-preload-data="off"
+					href={`/uploads/handbooks/Delegate Handbook.pdf`}>Delegate Handbook</a
+				>
 			</Saos>
 		</div>
 
@@ -105,9 +109,10 @@
 		margin-top: 0;
 		font-weight: 400;
 	}
-	.coming-soon {
-		font-weight: 400;
-		font-style: italic;
+	.main-guidebook {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 	.handbook-links {
 		display: grid;
