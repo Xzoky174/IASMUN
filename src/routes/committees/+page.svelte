@@ -25,6 +25,7 @@
 	import Jasmine from '$lib/assets/committee-members/Jasmine.jpg';
 	import Nasser from '$lib/assets/committee-members/Nasser.jpg';
 	import Rahaf from '$lib/assets/committee-members/Rahaf.jpg';
+	import Rana from '$lib/assets/committee-members/Rana.jpg';
 	import Shayan from '$lib/assets/committee-members/Shayan.jpg';
 
 	let width = 0;
@@ -43,7 +44,10 @@
 			chair_photo: Nasser,
 			cochair_letter:
 				"Greetings, Dear MUN conference delegates,<br /><br />My name is Aya Bawaba, and I'm a junior at IAS. I am privileged to have been allowed to serve as a co-chair in the MUN hosted by my school. I sincerely hope you'll put your public speaking, research, teamwork, and critical thinking abilities to the test by attending this conference. The significance of these skills will come in handy on many occasions, and it is my role to grant you the chance to enhance them in a formal and educational environment. I have been actively involved in leadership roles in the debating and public speaking fields at every school I have ever attended, so with that being said, I assure you that with those experiences, I'll give my most outstanding effort to serve as a co-chair on this committee.<br /><br />Besides MUN, I'm also interested and enthusiastic about other activities, such as painting, playing basketball, and reading self-help books. Moreover, I fully comprehend the effort and dedication required for MUN and how uneasy one may feel at a first conference. Rest assured, you will grow to love the experience it brings and will want to participate in as many future conferences as possible. Please take this opportunity to speak your mind and make it a fun experience overall.<br /><br />I'm looking forward to chairing this year's conference and listening to all the great speeches and resolutions written by fellow delegates during this conference. I wish you all the best of luck!",
-			cochair_photo: Aya
+			cochair_photo: Aya,
+			cochair2_letter:
+				"My name is Rana Mohammed, and I am a senior at IAS. I'm glad to be allowed to serve as a co-chair at IASMUN's first mun conference. My hobbies include basketball as well as photography. My rule as a co-chair involves making sure delegates fathom the complex rules and regulations in the mun while keeping it fun and light for them. My strongest desires are that this mun allows participants to present their research, teamwork, and debate skills and that they'll be able to make the best of their experience. Moreover, I'll do the best work I can as a co-chair. I wish all delegates the best of luck, and I'm thrilled to welcome you to this conference.",
+			cochair2_photo: Rana
 		},
 		{
 			class: 'DISEC',
@@ -167,6 +171,16 @@
 							<img class="img" src={committee.cochair_photo} alt="" />
 						</div>
 					</div>
+
+					{#if committee.cochair2_letter}
+						<div class="co-chair2">
+							<h2 class="subheader">Co-Chair's Letter</h2>
+							<div class="content">
+								<p>{@html committee.cochair2_letter}</p>
+								<img class="img" src={committee.cochair2_photo} alt="" />
+							</div>
+						</div>
+					{/if}
 				</div>
 			</div>
 		</Saos>
