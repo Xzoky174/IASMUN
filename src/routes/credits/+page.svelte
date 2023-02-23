@@ -15,7 +15,7 @@
 
 	let logistics = [
 		{ img: Nour, description: 'Interior Designer', name: 'Nour Ashraf' },
-		{ img: Sara, description: 'Logistics', name: 'Sara Nasser' },
+		{ img: Sara, description: 'Decorator', name: 'Sara Nasser' },
 		{ img: Youssef, description: 'Manager', name: 'Youssef Nasser' },
 		{ img: Shamla, description: 'Logistics', name: 'Shamla' }
 	];
