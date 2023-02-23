@@ -92,9 +92,14 @@
 					href="/guidebooks">Guidebooks</a
 				>
 				<a
+					in:fly={showLinks ? undefined : { x: 200, duration: 3200 }}
+					class={$page.url.pathname == '/credits' ? 'active' : ''}
+					href="/credits">Credits</a
+				>
+				<a
 					target="_blank"
 					rel="noreferrer"
-					in:fly={showLinks ? undefined : { x: 200, duration: 3200 }}
+					in:fly={showLinks ? undefined : { x: 200, duration: 3700 }}
 					href="https://forms.gle/ATgKBLsg8wGfq6pn7">Registration</a
 				>
 				<a
@@ -239,6 +244,11 @@
 		z-index: 99;
 	}
 
+	@media screen and (max-width: 1250px) {
+		nav {
+			padding: 0 20px;
+		}
+	}
 	@media screen and (max-width: 1150px) {
 		.page-links {
 			position: fixed;
@@ -255,11 +265,6 @@
 	@media screen and (max-width: 660px) {
 		.page-links {
 			width: 200px;
-		}
-	}
-	@media screen and (max-width: 500px) {
-		nav {
-			padding: 0 20px;
 		}
 	}
 	@media screen and (max-width: 400px) {
