@@ -91,15 +91,15 @@
 					class={$page.url.pathname == '/guidebooks' ? 'active' : ''}
 					href="/guidebooks">Guidebooks</a
 				>
-				<a
+				<!-- <a
 					in:fly={showLinks ? undefined : { x: 200, duration: 3200 }}
 					class={$page.url.pathname == '/credits' ? 'active' : ''}
 					href="/credits">Credits</a
-				>
+				> -->
 				<a
 					target="_blank"
 					rel="noreferrer"
-					in:fly={showLinks ? undefined : { x: 200, duration: 3700 }}
+					in:fly={showLinks ? undefined : { x: 200, duration: 3200 }}
 					href="https://forms.gle/ATgKBLsg8wGfq6pn7">Registration</a
 				>
 				<a

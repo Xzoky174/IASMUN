@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	import Saos from 'saos';
 
 	import Nour from '$lib/assets/credits/Logistics/Nour Ashraf.jpg';
@@ -307,4 +307,4 @@
 			opacity: 1;
 		}
 	}
-</style>
+</style> -->
