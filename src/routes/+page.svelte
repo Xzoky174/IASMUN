@@ -235,7 +235,8 @@
 		position: relative;
 	}
 	.IASMUN-pic {
-		height: 500px;
+		width: 380px;
+		height: 430px;
 		position: absolute;
 		left: 0;
 		right: 0;
@@ -596,12 +597,6 @@
 		}
 	}
 
-	@media screen and (max-width: 360px) {
-		.IASMUN-pic {
-			height: 380px;
-		}
-	}
-
 	@media screen and (max-width: 320px) {
 		.blob3 {
 			width: 260px;
@@ -644,16 +639,19 @@
 
 	@media screen and (max-height: 530px) {
 		.IASMUN-pic {
+			width: 370px;
 			height: 400px;
 			margin-top: 28px;
 		}
 	}
-	@media screen and (max-height: 420px) {
+	@media screen and (max-height: 500px) {
 		.IASMUN-pic {
+			width: 270px;
 			height: 300px;
 			margin-top: 28px;
 		}
 	}
+
 	@media screen and (max-height: 370px) {
 		.IAS-pic {
 			height: 400px;
