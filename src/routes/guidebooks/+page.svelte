@@ -19,7 +19,7 @@
 				<h1 class="header">Delegate <b>Handbook</b></h1>
 			</Saos>
 
-			<Saos animation="slide-right 1.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both" once={true}>
+			<Saos animation="slide-top 1.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both" once={true}>
 				<a
 					class="handbook-link"
 					data-sveltekit-preload-data="off"
@@ -36,8 +36,8 @@
 				{#each committees as committee, index}
 					<Saos
 						once={true}
-						animation={`slide-right ${
-							(index + 1 + 0.4) * 0.5
+						animation={`slide-top ${
+							index === 0 || index === 1 ? 1 : 1.5
 						}s cubic-bezier(0.250, 0.460, 0.450, 0.940) both`}
 					>
 						<a
@@ -61,6 +61,7 @@
 
 	* {
 		font-family: 'Rubik', sans-serif;
+		text-align: center;
 	}
 
 	.shapes {
@@ -96,7 +97,8 @@
 	.container {
 		padding: 22px 12px;
 		width: 800px;
-		height: calc(100% - 130px);
+		height: calc(100% - 220px);
+		max-height: 560px !important;
 		background-image: linear-gradient(to bottom, #080a68, #000);
 		color: #fff;
 		text-align: center;
@@ -116,9 +118,10 @@
 	}
 	.handbook-links {
 		display: grid;
+		grid-template-columns: repeat(2, 240px);
 		justify-content: center;
 		align-content: center;
-		gap: 14px;
+		gap: 12px;
 	}
 	.handbook-link {
 		display: block;
@@ -130,8 +133,8 @@
 		transition: 0.5s;
 	}
 	.handbook-link:hover {
-		background-color: #183d4a;
-		opacity: 0.85;
+		background-color: #245c70c0;
+		opacity: 0.8;
 	}
 
 	@keyframes -global-slide-bottom {
@@ -147,15 +150,15 @@
 		}
 	}
 
-	@keyframes -global-slide-right {
+	@keyframes -global-slide-top {
 		0% {
-			-webkit-transform: translateX(-200px);
-			transform: translateX(-200px);
+			-webkit-transform: translateY(60px);
+			transform: translateY(60px);
 			opacity: 0;
 		}
 		100% {
-			-webkit-transform: translateX(0);
-			transform: translateX(0);
+			-webkit-transform: translateY(0);
+			transform: translateY(0);
 			opacity: 1;
 		}
 	}
@@ -166,16 +169,21 @@
 		}
 	}
 	@media screen and (max-height: 690px) {
-		.handbook-links {
-			grid-template-columns: repeat(2, 240px);
+		.container {
+			height: calc(100% - 120px);
 		}
 	}
-	@media screen and (max-height: 690px) and (max-width: 540px) {
+	@media screen and (max-height: 540px) {
+		.container {
+			height: calc(100% - 80px);
+		}
+	}
+	@media screen and (max-width: 540px) {
 		.handbook-links {
-			grid-template-columns: repeat(2, 220px);
+			grid-template-columns: repeat(1, 240px);
 		}
 		.handbook-link {
-			width: 220px;
+			width: 240px;
 		}
 	}
 
