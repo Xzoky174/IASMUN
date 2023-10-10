@@ -637,6 +637,13 @@
 		}
 	}
 
+	@media screen and (max-width: 380px) {
+		.IASMUN-pic {
+			width: 250px;
+			height: 280px;
+		}
+	}
+
 	@media screen and (max-height: 530px) {
 		.IASMUN-pic {
 			width: 370px;
