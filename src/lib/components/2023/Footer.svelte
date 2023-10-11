@@ -1,11 +1,11 @@
 <script lang="ts">
-	import TwitterLogo from '$lib/assets/logos/socials/Twitter.svg';
-	import TikTokLogo from '$lib/assets/logos/socials/Tiktok.svg';
-	import InstagramLogo from '$lib/assets/logos/socials/Instagram.svg';
-	import YoutubeLogo from '$lib/assets/logos/socials/Youtube.svg';
+	import TwitterLogo from '$lib/assets/2023/logos/socials/Twitter.svg';
+	import TikTokLogo from '$lib/assets/2023/logos/socials/Tiktok.svg';
+	import InstagramLogo from '$lib/assets/2023/logos/socials/Instagram.svg';
+	import YoutubeLogo from '$lib/assets/2023/logos/socials/Youtube.svg';
 
-	import IASSchool from '$lib/assets/logos/IAS Logo.png';
-	import IASMun from '$lib/assets/logos/IASMUN.png';
+	import IASSchool from '$lib/assets/2023/logos/IAS Logo.png';
+	import IASMun from '$lib/assets/2023/logos/IASMUN.png';
 	import Saos from 'saos';
 
 	let slide_left = 'footer-slide-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both';

@@ -1,10 +1,10 @@
 <script lang="ts">
-	import TwitterLogo from '$lib/assets/logos/socials/Twitter.svg';
-	import TikTokLogo from '$lib/assets/logos/socials/Tiktok.svg';
-	import InstagramLogo from '$lib/assets/logos/socials/Instagram.svg';
-	import YoutubeLogo from '$lib/assets/logos/socials/Youtube.svg';
+	import TwitterLogo from '$lib/assets/2023/logos/socials/Twitter.svg';
+	import TikTokLogo from '$lib/assets/2023/logos/socials/Tiktok.svg';
+	import InstagramLogo from '$lib/assets/2023/logos/socials/Instagram.svg';
+	import YoutubeLogo from '$lib/assets/2023/logos/socials/Youtube.svg';
 
-	import Menu from '$lib/assets/logos/Menu.svg';
+	import Menu from '$lib/assets/2023/logos/Menu.svg';
 
 	import { page } from '$app/stores';
 
@@ -34,6 +34,8 @@
 />
 
 <nav>
+	<p class="msg">You are viewing an archive</p>
+
 	<div class="socials">
 		{#if ready}
 			<div class="links" in:fly={{ y: -200, duration: 1500 }}>
@@ -73,23 +75,23 @@
 			{#if ready}
 				<a
 					in:fly={showLinks ? undefined : { x: 200, duration: 1200 }}
-					class={$page.url.pathname == '/' ? 'active' : ''}
-					href="/">Home</a
+					class={$page.url.pathname == '/archives/2023' ? 'active' : ''}
+					href="/archives/2023">Home</a
 				>
 				<a
 					in:fly={showLinks ? undefined : { x: 200, duration: 1700 }}
-					class={$page.url.pathname == '/committees' ? 'active' : ''}
-					href="/committees">Committees</a
+					class={$page.url.pathname == '/archives/2023/committees' ? 'active' : ''}
+					href="/archives/2023/committees">Committees</a
 				>
 				<a
 					in:fly={showLinks ? undefined : { x: 200, duration: 2200 }}
-					class={$page.url.pathname == '/conference-schedule' ? 'active' : ''}
-					href="/conference-schedule">Conference Schedule</a
+					class={$page.url.pathname == '/archives/2023/conference-schedule' ? 'active' : ''}
+					href="/archives/2023/conference-schedule">Conference Schedule</a
 				>
 				<a
 					in:fly={showLinks ? undefined : { x: 200, duration: 2700 }}
-					class={$page.url.pathname == '/guidebooks' ? 'active' : ''}
-					href="/guidebooks">Guidebooks</a
+					class={$page.url.pathname == '/archives/2023/guidebooks' ? 'active' : ''}
+					href="/archives/2023/guidebooks">Guidebooks</a
 				>
 				<!-- <a
 					in:fly={showLinks ? undefined : { x: 200, duration: 3200 }}
@@ -126,6 +128,14 @@
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
+	.msg {
+		color: #fff;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
 	a {
 		margin: 0;
 		padding: 0;
@@ -137,7 +147,7 @@
 		top: 0;
 		right: 0;
 		left: 0;
-		padding: 0 65px;
+		padding: 20px 65px 0 65px;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -246,7 +256,7 @@
 
 	@media screen and (max-width: 1250px) {
 		nav {
-			padding: 0 20px;
+			padding: 20px 20px 0 20px;
 		}
 	}
 	@media screen and (max-width: 1150px) {
@@ -265,6 +275,12 @@
 	@media screen and (max-width: 660px) {
 		.page-links {
 			width: 200px;
+		}
+	}
+	@media screen and (max-width: 410px) {
+		.msg {
+			width: 100vw;
+			text-align: center;
 		}
 	}
 	@media screen and (max-width: 400px) {

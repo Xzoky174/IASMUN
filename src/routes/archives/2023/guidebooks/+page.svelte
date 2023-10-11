@@ -1,9 +1,9 @@
 <script lang="ts">
 	import Saos from 'saos';
 
-	import Shape1 from '$lib/assets/shapes/Vector 1.svg';
-	import Shape6 from '$lib/assets/shapes/Vector 6.svg';
-	import Shape7 from '$lib/assets/shapes/Vector 7.svg';
+	import Shape1 from '$lib/assets/2023/shapes/Vector 1.svg';
+	import Shape6 from '$lib/assets/2023/shapes/Vector 6.svg';
+	import Shape7 from '$lib/assets/2023/shapes/Vector 7.svg';
 
 	let committees = ['GA', 'DISEC', 'WHO', 'UNODC'];
 </script>
@@ -23,7 +23,7 @@
 				<a
 					class="handbook-link"
 					data-sveltekit-preload-data="off"
-					href={`/uploads/handbooks/Delegate Handbook.pdf`}>Delegate Handbook</a
+					href={`/uploads/2023/handbooks/Delegate Handbook.pdf`}>Delegate Handbook</a
 				>
 			</Saos>
 		</div>
@@ -43,7 +43,7 @@
 						<a
 							class="handbook-link"
 							data-sveltekit-preload-data="off"
-							href={`/uploads/handbooks/${committee}_Handbook.pdf`}>{committee}</a
+							href={`/uploads/2023/handbooks/${committee}_Handbook.pdf`}>{committee}</a
 						>
 					</Saos>
 				{/each}
@@ -97,7 +97,7 @@
 	.container {
 		padding: 22px 12px;
 		width: 800px;
-		height: calc(100% - 220px);
+		height: calc(100% - 200px);
 		max-height: 560px !important;
 		background-image: linear-gradient(to bottom, #080a68, #000);
 		color: #fff;
@@ -185,6 +185,12 @@
 		.handbook-link {
 			width: 240px;
 		}
+		.container {
+			height: calc(100% - 80px);
+		}
+		.main-guidebook {
+			margin-bottom: 35px;
+		}
 	}
 
 	@media screen and (max-width: 850px) {
@@ -194,7 +200,7 @@
 	}
 	@media screen and (max-width: 330px) {
 		.handbook-link {
-			width: calc(100vw - 60px);
+			/* width: calc(100vw - 60px); */
 		}
 	}
 </style>

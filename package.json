@@ -34,5 +34,7 @@
 		"vite": "^4.0.0"
 	},
 	"type": "module",
-	"dependencies": {}
+	"dependencies": {
+		"svelte-persisted-store": "^0.7.0"
+	}
 }

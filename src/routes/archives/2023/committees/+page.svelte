@@ -1,32 +1,32 @@
 <script lang="ts">
 	import Saos from 'saos';
 
-	import Blob1 from '$lib/assets/blobs/Vector 1.svg';
-	import Blob2 from '$lib/assets/blobs/Vector 2.svg';
-	import Blob3 from '$lib/assets/blobs/Vector 3.svg';
+	import Blob1 from '$lib/assets/2023/blobs/Vector 1.svg';
+	import Blob2 from '$lib/assets/2023/blobs/Vector 2.svg';
+	import Blob3 from '$lib/assets/2023/blobs/Vector 3.svg';
 
-	import Line1 from '$lib/assets/lines/Vector 1.svg';
-	import Line2 from '$lib/assets/lines/Vector 2.svg';
-	import Line3 from '$lib/assets/lines/Vector 3.svg';
+	import Line1 from '$lib/assets/2023/lines/Vector 1.svg';
+	import Line2 from '$lib/assets/2023/lines/Vector 2.svg';
+	import Line3 from '$lib/assets/2023/lines/Vector 3.svg';
 
-	import Shape1 from '$lib/assets/shapes/Vector 1.svg';
-	import Shape2 from '$lib/assets/shapes/Vector 2.svg';
-	import Shape3 from '$lib/assets/shapes/Vector 3.svg';
-	import Shape4 from '$lib/assets/shapes/Vector 4.svg';
-	import Shape5 from '$lib/assets/shapes/Vector 5.svg';
-	import Shape6 from '$lib/assets/shapes/Vector 6.svg';
-	import Shape7 from '$lib/assets/shapes/Vector 7.svg';
-	import Shape8 from '$lib/assets/shapes/Vector 8.svg';
+	import Shape1 from '$lib/assets/2023/shapes/Vector 1.svg';
+	import Shape2 from '$lib/assets/2023/shapes/Vector 2.svg';
+	import Shape3 from '$lib/assets/2023/shapes/Vector 3.svg';
+	import Shape4 from '$lib/assets/2023/shapes/Vector 4.svg';
+	import Shape5 from '$lib/assets/2023/shapes/Vector 5.svg';
+	import Shape6 from '$lib/assets/2023/shapes/Vector 6.svg';
+	import Shape7 from '$lib/assets/2023/shapes/Vector 7.svg';
+	import Shape8 from '$lib/assets/2023/shapes/Vector 8.svg';
 
-	import Aya from '$lib/assets/committee-members/Aya.jpg';
-	import Basil from '$lib/assets/committee-members/Basil.jpg';
-	import Carine from '$lib/assets/committee-members/Carine.jpg';
-	import Imran from '$lib/assets/committee-members/Imran.jpg';
-	import Jasmine from '$lib/assets/committee-members/Jasmine.jpg';
-	import Nasser from '$lib/assets/committee-members/Nasser.jpg';
-	import Rahaf from '$lib/assets/committee-members/Rahaf.jpg';
-	import Rana from '$lib/assets/committee-members/Rana.jpg';
-	import Shayan from '$lib/assets/committee-members/Shayan.jpg';
+	import Aya from '$lib/assets/2023/committee-members/Aya.jpg';
+	import Basil from '$lib/assets/2023/committee-members/Basil.jpg';
+	import Carine from '$lib/assets/2023/committee-members/Carine.jpg';
+	import Imran from '$lib/assets/2023/committee-members/Imran.jpg';
+	import Jasmine from '$lib/assets/2023/committee-members/Jasmine.jpg';
+	import Nasser from '$lib/assets/2023/committee-members/Nasser.jpg';
+	import Rahaf from '$lib/assets/2023/committee-members/Rahaf.jpg';
+	import Rana from '$lib/assets/2023/committee-members/Rana.jpg';
+	import Shayan from '$lib/assets/2023/committee-members/Shayan.jpg';
 
 	let width = 0;
 

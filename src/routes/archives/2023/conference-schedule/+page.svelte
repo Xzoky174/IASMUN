@@ -1,10 +1,10 @@
 <script>
 	import Saos from 'saos';
 
-	import Shape1 from '$lib/assets/shapes/Vector 1.svg';
-	import Shape8 from '$lib/assets/shapes/Vector 8.svg';
+	import Shape1 from '$lib/assets/2023/shapes/Vector 1.svg';
+	import Shape8 from '$lib/assets/2023/shapes/Vector 8.svg';
 
-	import Line3 from '$lib/assets/lines/Vector 3.svg';
+	import Line3 from '$lib/assets/2023/lines/Vector 3.svg';
 
 	let days = [
 		{

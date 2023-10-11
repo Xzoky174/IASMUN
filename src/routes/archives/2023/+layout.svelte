@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Navbar from '$lib/components/Navbar.svelte';
-	import Footer from '$lib/components/Footer.svelte';
-	import Top from '$lib/components/Top.svelte';
+	import Navbar from '$lib/components/2023/Navbar.svelte';
+	import Footer from '$lib/components/2023/Footer.svelte';
+	import Top from '$lib/components/2023/Top.svelte';
 
 	import IntersectionObserver from 'svelte-intersection-observer';
 
