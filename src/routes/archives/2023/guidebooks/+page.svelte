@@ -193,14 +193,18 @@
 		}
 	}
 
+	@media screen and (max-width: 410px) {
+		.wrapper {
+			height: 700px;
+		}
+		.container {
+			height: 800px;
+		}
+	}
+
 	@media screen and (max-width: 850px) {
 		.container {
 			width: calc(100vw - 50px);
-		}
-	}
-	@media screen and (max-width: 330px) {
-		.handbook-link {
-			/* width: calc(100vw - 60px); */
 		}
 	}
 </style>

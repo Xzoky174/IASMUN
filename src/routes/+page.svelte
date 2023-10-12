@@ -18,7 +18,7 @@
 		place-items: center;
 		font-family: 'Nunito', sans-serif;
 		text-align: center;
-		padding: 15px 20px;
+		padding: 0 20px;
 	}
 	.archives {
 		margin-top: 44px;
