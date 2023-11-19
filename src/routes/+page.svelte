@@ -205,9 +205,11 @@
 		width: 380px;
 		height: 300px;
 		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		bottom: auto;
+		top: auto;
 	}
 
 	.letters {
