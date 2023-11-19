@@ -196,7 +196,7 @@
 	}
 	.IAS-pic {
 		min-width: 100%;
-		height: calc(100vh - 85px);
+		height: calc(100vh - 94px);
 		-webkit-filter: blur(3px) !important;
 		filter: blur(80%) !important;
 		position: relative;
@@ -205,9 +205,6 @@
 		width: 380px;
 		height: 300px;
 		position: absolute;
-		left: 0;
-		right: 0;
-		margin: 0 auto;
 	}
 
 	.letters {
