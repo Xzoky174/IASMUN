@@ -242,20 +242,6 @@
 		right: 0;
 		margin: 0 auto;
 	}
-	.countdown .header {
-		font-weight: bold;
-		display: block;
-		margin-bottom: 22px;
-	}
-	.countdown {
-		text-align: center;
-		font-size: 28px;
-		margin: 46px 0;
-		background-color: #326198;
-		border-radius: 6px;
-		color: #fff;
-		padding: 18px 32px;
-	}
 	.hero {
 		display: grid;
 		place-items: center;
@@ -609,12 +595,6 @@
 		}
 		.blob3 {
 			top: 60px;
-		}
-	}
-
-	@media screen and (max-width: 475px) {
-		.countdown {
-			width: calc(100vw - 80px);
 		}
 	}
 
