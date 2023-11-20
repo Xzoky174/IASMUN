@@ -219,20 +219,22 @@
 		align-items: center;
 		gap: 25px;
 		text-align: center;
+		margin-top: 20px;
 	}
-	.page-links * {
+	.page-links a {
 		font-family: 'Inter', sans-serif;
 		color: rgba(206, 212, 218, 0.56);
 		text-decoration: none;
 		transition: 0.25s;
 		position: relative;
+		padding-bottom: 20px;
 	}
 	.page-links .active,
-	.page-links *:hover {
+	.page-links a:hover {
 		color: #fff;
 	}
 	.page-links .active::after,
-	.page-links *::after {
+	.page-links a::after {
 		opacity: 1;
 		content: '';
 		width: 100%;
@@ -241,20 +243,25 @@
 		position: absolute;
 		left: 0;
 		right: 0;
-		bottom: -4px;
+		bottom: 16px;
 	}
-	.page-links *::after {
+	.page-links a::after {
 		width: 100%;
 		opacity: 0;
-		bottom: -10px;
+		bottom: 8px;
 		transition: 0.25s;
 		margin-left: auto;
 		margin-right: auto;
 	}
-	.page-links *:hover:after {
+	.page-links a:hover:after {
 		opacity: 1;
 		width: 100%;
-		bottom: -4px;
+		bottom: 15px;
+	}
+	.page-links a::after:hover {
+		opacity: 1;
+		width: 100%;
+		bottom: 15px;
 	}
 	.menu {
 		width: 55px;
