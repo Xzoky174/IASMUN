@@ -21,6 +21,8 @@
 	import PRMember2 from '$lib/assets/organizers/Nour Ashraf.webp';
 	import PRMember3 from '$lib/assets/organizers/Haneen Saeed.webp';
 
+	import ChairHead from '$lib/assets/dais/Rahaf Ahmed.webp';
+
 	import Saos from 'saos';
 </script>
 
@@ -208,6 +210,45 @@
 				<img src={PRMember3} alt="Haneen Saeed" />
 				<p class="member-description">Haneen Saeed</p>
 			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<Saos once={true} animation="slide-bottom 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;">
+			<h1>Head of Chairs</h1>
+		</Saos>
+
+		<div class="head">
+			<Saos
+				once={true}
+				animation="slide-right-pic 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;"
+			>
+				<div class="head-container">
+					<img src={ChairHead} alt="" />
+					<p class="member-description head-name">Rahaf Ahmed</p>
+					<p class="member-description">
+						<span class="role">Head of Chairs</span>
+					</p>
+				</div>
+			</Saos>
+
+			<Saos
+				once={true}
+				animation="slide-left-letter 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;"
+			>
+				<p class="head-letter">
+					Hello everyone, My name is Rahaf Ahmed, and I am thrilled to be taking on the role of head
+					of chairs for the second edition of our annual IASMUN conference, as well as chairing for
+					the Arab League EN. I am a senior in IAS, and my interest in politics and debate has
+					always been strong. However, my passion grew after my first MUN experience. In fact, I
+					enjoyed it so much that I immediately made the decision to pursue international relations
+					instead of law. With that being said, I extend a warm welcome to you at IASMUN. I hope
+					that this experience provides you with the opportunity to improve your public speaking
+					abilities, debate skills, research capabilities, quick thinking abilities, and confidence.
+					As head of chairs, I will put forth my greatest effort to fulfill my responsibilities and
+					ensure that IASMUN remains in your memories. I wish you all the best of luck.
+				</p>
+			</Saos>
 		</div>
 	</div>
 </div>
