@@ -286,6 +286,7 @@
 			background-color: var(--blue);
 			padding: 35px 40px;
 			width: 280px;
+			gap: 0;
 		}
 	}
 	@media screen and (max-width: 660px) {
