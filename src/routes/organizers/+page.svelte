@@ -13,6 +13,7 @@
 	import LogisticsMember3 from '$lib/assets/organizers/Lara Alsamraay.webp';
 	import LogisticsMember4 from '$lib/assets/organizers/Abdullah Firas.webp';
 	import LogisticsMember5 from '$lib/assets/organizers/Rayan Nimer.webp';
+	import LogisticsMember6 from '$lib/assets/organizers/Turki Saad.webp';
 
 	import PRHead from '$lib/assets/organizers/Ali Faisal.webp';
 
@@ -145,10 +146,13 @@
 				<img src={LogisticsMember4} alt="Abdullah Firas" />
 				<p class="member-description">Abdullah Firas</p>
 			</div>
-
 			<div class="member">
 				<img src={LogisticsMember5} alt="Rayan Nimer" />
 				<p class="member-description">Rayan Nimer</p>
+			</div>
+			<div class="member">
+				<img src={LogisticsMember6} alt="Turki Saad" />
+				<p class="member-description">Turki Saad</p>
 			</div>
 		</div>
 	</div>
