@@ -1,6 +1,6 @@
 <script lang="ts">
-	import IASSchool from '$lib/assets/images/School.webp';
 	import IASMun from '$lib/assets/logos/IASMUN.webp';
+	import IAS from '$lib/assets/images/School.webp';
 
 	import { fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
@@ -28,8 +28,7 @@
 	<meta name="description" content="Brief Introduction to IASMUN's Main Organizers" />
 </svelte:head>
 
-<div class="intro">
-	<img class="IAS-pic" src={IASSchool} alt="IAS School" />
+<div class="intro" style={`background-image: url(${IAS})`}>
 	{#if ready}
 		<img in:fly={{ y: 300, duration: 1800 }} class="IASMUN-pic" src={IASMun} alt="IASMUN" />
 	{/if}
@@ -191,23 +190,22 @@
 	}
 
 	.intro {
-		display: grid;
-		place-items: center;
-	}
-	.IAS-pic {
-		min-width: 100%;
-		height: calc(100vh - 94px);
-		-webkit-filter: blur(3px) !important;
-		filter: blur(80%) !important;
 		position: relative;
+		width: 100%;
+		height: calc(100vh - 94px);
+		background-position: center;
+		background-size: cover;
 	}
 	.IASMUN-pic {
 		width: 380px;
 		height: 300px;
 		position: absolute;
 		left: 0;
+		top: 0;
 		right: 0;
-		margin: 0 auto;
+		bottom: 0;
+		display: block;
+		margin: auto;
 	}
 
 	.letters {

@@ -197,7 +197,7 @@
 			],
 			chair_letter: `Hello Delegates!
 			<br /><br />
-			I'm Meera, your UNODC Chair for IASMUN 2023. Let me share a bit about myself: I'm 17, a first-year university student pursuing a Bachelor of Science in Sustainability and Environmental Science, and proudly a member of my university's football team. I'm looking forward to meeting you all and be part to this year's conference. Best of luck delegates!`,
+			I'm Meera, your UNODC Chair for IASMUN 2024. Let me share a bit about myself: I'm 17, a first-year university student pursuing a Bachelor of Science in Sustainability and Environmental Science, and proudly a member of my university's football team. I'm looking forward to meeting you all and be part to this year's conference. Best of luck delegates!`,
 			chair_photo: UNODCCHAIR,
 			chair_name: 'Meera Anwahi',
 			cochair_letter: `Hello fellow delegates! My name is Nour Ashraf. I am from Egypt, and I am 15 years old. I am a
@@ -249,7 +249,17 @@
 			purpose:
 				'The Arab League is an organization dedicated to promoting cooperation and coordination among Arab nations. Their work spans various areas, including politics, economics, culture, and social issues, all with a focus on advancing the interests of Arab states.',
 			topics: ['The Humanitarian Crisis in Gaza', 'The Syrian Civil War'],
-			chair_letter: 'Not Available Yet',
+			chair_letter: `Dear distinguished delegstes, I'm Rahaf Ahmed, an IAS senior, and I'm honored to be head of chairs and Arab League EN chair. I am delighted to have you all as part of the IASMUN family.
+			<br /><br />
+			My passion for politics and debate has always been strong. But my passion grew after my first MUN. I enjoyed it so much that I switched to international relations from law.
+			<br /><br />
+			I pushed for an Arab League in English committee for this year's IASMUN. Several Middle Eastern countries, some of which are in the spotlight while others are overlooked, face significant challenges that motivated this decision.
+			<br /><br />
+			Our generation possesses a strong awareness of global affairs; therefore, I have selected ongoing conflicts that provoke strong opinions from all of us, and it's crucial that I give our youth a place to debate and innovate.
+			<br /><br />
+			With that being said, I extend a warm welcome to you at IASMUN. I hope that this experience provides you with the opportunity to improve your public speaking abilities, debate skills, research capabilities, quick thinking abilities, and confidence.
+			<br /><br />
+			I hope we host a conference that you will enjoy and will always remember. I wish you all the best of luck.`,
 			chair_photo: ARABLEAGUECHAIR,
 			chair_name: 'Rahaf Ahmed',
 			cochair_letter: `Esteemed delegates, it's with great pleasure and enthusiasm that I, Zainab Waqass, the co-chair of Arab League (EN) extend a warm welcome to each and everyone of you at the IASMUN '24. 
@@ -277,7 +287,7 @@
 			],
 			chair_letter: `Dear delegates,
 			<br />
-			We are delighted to welcome you to our committee at IASMUN 2023. This conference will provide an excellent platform for delegates to discuss and address pressing global issues. We understand
+			We are delighted to welcome you to our committee at IASMUN 2024. This conference will provide an excellent platform for delegates to discuss and address pressing global issues. We understand
 			that some of you may be participating in an MUN conference for the first time, and we wish you all the best. We know that being a first-time delegate can be daunting, from preparing position papers and researching your country’s foreign policy and allies, to practicing your opening speech. However, we want to assure you that we are here to support and guide you every step of the way. We have prepared a Background Guide to provide you with basic overview of the topics that will be discussed during the conference. We look forward to an enriching, fruitful and enlightening experience from all you delegates, and we wish you the best of luck!`,
 			chair_photo: UNICEFCHAIR,
 			chair_name: 'Ansh Uchil',
