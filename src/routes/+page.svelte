@@ -359,7 +359,7 @@
 	}
 
 	@media screen and (max-height: 390px) {
-		.IAS-pic {
+		.intro {
 			height: 400px;
 		}
 	}
