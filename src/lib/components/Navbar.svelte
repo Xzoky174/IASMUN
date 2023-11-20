@@ -256,12 +256,12 @@
 	.page-links a:hover:after {
 		opacity: 1;
 		width: 100%;
-		bottom: 15px;
+		bottom: 16px;
 	}
 	.page-links a::after:hover {
 		opacity: 1;
 		width: 100%;
-		bottom: 15px;
+		bottom: 16px;
 	}
 	.menu {
 		width: 55px;
