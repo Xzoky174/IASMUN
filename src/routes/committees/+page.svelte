@@ -376,7 +376,10 @@
 				<div class="co-chair">
 					<h2 class="subheader">Co-Chair's Letter</h2>
 					<div class="content">
-						<Saos animation="slide-left-letter 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;">
+						<Saos
+							once={true}
+							animation="slide-left-letter 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;"
+						>
 							<p>{@html committee.cochair_letter}</p>
 						</Saos>
 
