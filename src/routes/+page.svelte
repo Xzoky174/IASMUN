@@ -28,7 +28,7 @@
 	<meta name="description" content="Brief Introduction to IASMUN's Main Organizers" />
 </svelte:head>
 
-<div class="intro" style={`background-image: url(${IAS})`}>
+<div class="intro" style={`background-image: url(${IAS}); overflow-y: hidden;`}>
 	{#if ready}
 		<img in:fly={{ y: 300, duration: 1800 }} class="IASMUN-pic" src={IASMun} alt="IASMUN" />
 	{/if}
@@ -106,14 +106,29 @@
 			<div class="text">
 				<Saos once={true} animation="fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both">
 					<p>
-						Hello there, I am Yousef Naser, the Deputy Secretary-General. I am honored to have you
-						join or learn about us. As the Deputy Secretary-General, I have a role to ensure proper
-						procedures are taken and to support my fellow organizers. Whenever or wherever a problem
-						might arise, I will be there to help. Each member, delegate, and advisor must be thanked
-						and respected; each one of them has worked hard to reach this point, to learn and teach.
-						IASMUN has the most ambitious people working to ensure it successfully fulfills its
-						goals. I am proud to be part of IASMUN, and I will be there to support you if any
-						problems occur.
+						Hello there,
+						<br /><br />
+
+						I am Yousef Naser, the Deputy Secretary-General, extending a warm welcome to the
+						International Academic School Model United Nations 2024!
+						<br /><br />
+
+						In my role, I ensure proper procedures are taken and support fellow organizers. Wherever
+						and whenever challenges arise, I am committed to helping. I want to express gratitude
+						and respect to each member, delegate, and advisor—your hard work has brought us to this
+						point. IASMUN is driven by ambitious individuals dedicated to its goals.
+						<br /><br />
+
+						As Deputy Secretary-General, I am proud to be part of IASMUN and ready to assist with
+						any issues. Thank you for being here, and I look forward to a successful IASMUN 2024.
+						<br /><br />
+
+						Best regards,
+						<br /><br />
+
+						Yousef Naser
+						<br />
+						Deputy Secretary-General
 					</p>
 				</Saos>
 			</div>
