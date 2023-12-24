@@ -10,7 +10,7 @@
 	import GA3CHAIR from '$lib/assets/dais/Naamna Singh.webp';
 	import GA3COCHAIR from '$lib/assets/dais/Hiba Ali.webp';
 
-	import GA4CHAIR from '$lib/assets/dais/Lana Dhaou.webp';
+	import GA4CHAIR from '$lib/assets/dais/Zaina Hisham.webp';
 	import GA4COCHAIR from '$lib/assets/dais/Shervin Naser.webp';
 
 	import GA5CHAIR from '$lib/assets/dais/Arushi Gulati.webp';
@@ -127,14 +127,9 @@
 				'Addressing the Western Sahara Conflict: Self-Determination and Peaceful Resolution',
 				'Enhancing Cybersecurity in the Context of State Sovereignty'
 			],
-			chair_letter: `Hello future delegates, and welcome to IASMUN! I'm so excited to be chairing GA4 this year. I
-			can't wait to meet all my delegates and watch them progress throughout the conference! Outside
-			my school work, I balance my time between practicing my violin, reading new books, and
-			attending MUNs. Whether IASMUN is your first experience as a delegate or one of many
-			conferences you're attending, we ensure you a unique MUN experience as part of the 4th
-			General Assembly Committee through its various topics. We wish you all the best!`,
+			chair_letter: `Hello there, esteemed delegates! Welcome to General Assembly 4 at IASMUN. I am Zaina Hisham, your chair for this riveting conference. As we embark on this journey together, I am thrilled to meet such a diverse and talented group of individuals. As I see it, this is more than just a conference; it's a chance for you to exchange ideas and build skills that transcend beyond school halls. I encourage each of you to engage fully and embrace this opportunity. Let's make this conference not only insightful but also enjoyable. I am looking forward to witnessing the incredible contributions I am confident you will all bring to the table!`,
 			chair_photo: GA4CHAIR,
-			chair_name: 'Lana Dhaou',
+			chair_name: 'Zaina Hisham',
 			cochair_letter: `Dear Delegates,
 			<br /><br />
 			It is my pleasure to welcome you to the IAS MUN conference. I am Shervin Naser, your Co-Chair
