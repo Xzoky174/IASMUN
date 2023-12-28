@@ -48,7 +48,7 @@
 		<Saos once={true} animation="fade-in 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both">
 			<p>
 				In the fall of 2023, a group of visionary seniors dared to dream big. Inspired by a shared
-				passion for diplomacy and global issues, they founded the International Academy of Students
+				passion for diplomacy and global issues, they founded the International Academic School
 				Model United Nations (IASMUN). These seniors, now 2023 graduates, infused IASMUN with
 				creativity and enthusiasm.
 				<br />
