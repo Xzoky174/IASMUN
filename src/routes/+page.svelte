@@ -3,15 +3,26 @@
 	import IAS from '$lib/assets/images/School.webp';
 
 	import { fly } from 'svelte/transition';
+
 	import { onMount } from 'svelte';
+	import { navigating } from '$app/stores';
 
 	import SecretaryGeneral from '$lib/assets/organizers/Aya Bawaba.webp';
 	import DeputySecretaryGeneral from '$lib/assets/organizers/Yousef Naser.webp';
 	import ChiefAdvisor from '$lib/assets/organizers/Rushda Saeed.webp';
 
 	import Saos from 'saos';
+	import Countdown from '$lib/components/Countdown.svelte';
+
+	let destroyed = false;
+	$: if ($navigating) {
+		if ($navigating.to?.url.pathname !== '/') {
+			destroyed = true;
+		}
+	}
 
 	let ready = false;
+
 	onMount(() => {
 		ready = true;
 		width = window.innerWidth;
@@ -25,8 +36,13 @@
 <svelte:head>
 	<title>Home</title>
 
-	<meta name="description" content="Brief Introduction to IASMUN's Main Organizers" />
+	<meta name="description" content="The Official Website for IASMUN 2024!" />
 </svelte:head>
+
+<div class="countdown">
+	<p>IASMUN 2024 Countdown</p>
+	<Countdown bind:destroyed />
+</div>
 
 <div class="intro" style={`background-image: url(${IAS}); overflow-y: hidden;`}>
 	{#if ready}
@@ -204,6 +220,20 @@
 		margin: 0;
 	}
 
+	.countdown {
+		font-family: 'Alfa Slab One', sans-serif;
+		display: grid;
+		place-items: center;
+		text-align: center;
+		padding: 45px 15px;
+	}
+	.countdown p {
+		font-family: 'Alfa Slab One', sans-serif;
+		font-weight: 400;
+		font-size: 50px;
+		color: var(--blue);
+		margin-bottom: 48px;
+	}
 	.intro {
 		position: relative;
 		width: 100%;
