@@ -234,6 +234,11 @@
 		color: var(--blue);
 		margin-bottom: 48px;
 	}
+	@media screen and (max-width: 350px) {
+		.countdown p {
+			font-size: 40px;
+		}
+	}
 	.intro {
 		position: relative;
 		width: 100%;

@@ -64,4 +64,13 @@
 	li {
 		width: 240px;
 	}
+	@media screen and (max-width: 600px) {
+		ol {
+			gap: 2px;
+			justify-content: space-evenly;
+		}
+		li {
+			width: 180px;
+		}
+	}
 </style>
