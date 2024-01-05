@@ -7,7 +7,7 @@
 	import GA2CHAIR from '$lib/assets/dais/Basil Adnan.webp';
 	import GA2COCHAIR from '$lib/assets/dais/Reem Saleem.webp';
 
-	import GA3CHAIR from '$lib/assets/dais/Naamna Singh.webp';
+	import GA3CHAIR from '$lib/assets/dais/Zaynab.webp';
 	import GA3COCHAIR from '$lib/assets/dais/Hiba Ali.webp';
 
 	import GA4CHAIR from '$lib/assets/dais/Zaina Hisham.webp';
@@ -25,7 +25,7 @@
 	import ARABLEAGUECHAIR from '$lib/assets/dais/Rahaf Ahmed.webp';
 	import ARABLEAGUECOCHAIR from '$lib/assets/dais/Zainab Waqass.webp';
 
-	import UNICEFCHAIR from '$lib/assets/dais/Ansh Uchil.webp';
+	import UNICEFCHAIR from '$lib/assets/dais/Salma Hani.webp';
 	import UNICEFCOCHAIR from '$lib/assets/dais/Nour Mostafa.webp';
 
 	let width = 0;
@@ -104,14 +104,9 @@
 				'Promoting Educational Access for Children in Palestine',
 				'Recovery and Reintegration of Internally Displaced Persons (IDPs) in Libya'
 			],
-			chair_letter: `Greetings from the head chair of GA3. I am naamna singh, the unofficial mayor of this diplomatic
-			circus. Where we shall tackle the world's most important issues with the deftness of a cat
-			attempting to squeeze into a shoebox during these sessions we are going to talk about topics
-			from education system to the humanitarian issues of our world. So put on your thinking caps,
-			because we're about to set sail into unexplored territory of international humour. Let the
-			arguments begin, and may the best punchline win!`,
+			chair_letter: `Hello delegates! I'm Zaynab your Head Chair for the General Assembly Third Conmittee. I can't wait to meet each of you and witness the incredible debates and discussion that will unfold during this conference. Good luck :)`,
 			chair_photo: GA3CHAIR,
-			chair_name: 'Naamna Singh',
+			chair_name: 'Zaynab',
 			cochair_letter: `Hi delegates! I’m Hiba Ali and i’m the co-chair of GA3 committee. I look forward to see all of you
 			and get to know each and every one of you. I hope to create a comfortable and friendly
 			environment where everyone can communicate and debate without problems!`,
@@ -280,12 +275,9 @@
 				'Child Rights in the Context of Armed Conflict',
 				'Addressing the Impact of Child Marriage on Gender Equality'
 			],
-			chair_letter: `Dear delegates,
-			<br />
-			We are delighted to welcome you to our committee at IASMUN 2024. This conference will provide an excellent platform for delegates to discuss and address pressing global issues. We understand
-			that some of you may be participating in an MUN conference for the first time, and we wish you all the best. We know that being a first-time delegate can be daunting, from preparing position papers and researching your country’s foreign policy and allies, to practicing your opening speech. However, we want to assure you that we are here to support and guide you every step of the way. We have prepared a Background Guide to provide you with basic overview of the topics that will be discussed during the conference. We look forward to an enriching, fruitful and enlightening experience from all you delegates, and we wish you the best of luck!`,
+			chair_letter: `Greetings delegates! I’m Salma Hani, I’ll be serving as the Chair of UNICEF in IASMUN24. Words can’t describe how excited I am to witness all the drama and heated debates that will, for sure, happen in our committee. I’m a strong believer that MUNs could be a new found hobby to anyone and it’ll be my responsibility to make this conference an unforgettable and enlightening experience to you all.`,
 			chair_photo: UNICEFCHAIR,
-			chair_name: 'Ansh Uchil',
+			chair_name: 'Salma Hani',
 			cochair_letter: `Welcome to IASMUN, it's a pleasure to greet each one of you. Your presence at this MUN will
 				bring knowledge and invaluable experience. As a co-chair, I'm committed to facilitate an
 				environment that opens debates, encourages the exchange of ideas, and makes this experience
