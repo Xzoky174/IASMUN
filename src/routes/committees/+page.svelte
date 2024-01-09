@@ -104,7 +104,7 @@
 				'Promoting Educational Access for Children in Palestine',
 				'Recovery and Reintegration of Internally Displaced Persons (IDPs) in Libya'
 			],
-			chair_letter: `Hello delegates! I'm Zaynab your Head Chair for the General Assembly Third Conmittee. I can't wait to meet each of you and witness the incredible debates and discussion that will unfold during this conference. Good luck :)`,
+			chair_letter: `Hello delegates! I'm Zaynab your Head Chair for the General Assembly Third Committee. I can't wait to meet each of you and witness the incredible debates and discussion that will unfold during this conference. Good luck :)`,
 			chair_photo: GA3CHAIR,
 			chair_name: 'Zaynab',
 			cochair_letter: `Hi delegates! I’m Hiba Ali and i’m the co-chair of GA3 committee. I look forward to see all of you
