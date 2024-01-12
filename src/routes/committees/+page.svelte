@@ -11,7 +11,6 @@
 	import GA3COCHAIR from '$lib/assets/dais/Hiba Ali.webp';
 
 	import GA4CHAIR from '$lib/assets/dais/Zaina Hisham.webp';
-	import GA4COCHAIR from '$lib/assets/dais/Shervin Naser.webp';
 
 	import GA5CHAIR from '$lib/assets/dais/Arushi Gulati.webp';
 	import GA5COCHAIR from '$lib/assets/dais/Joudy Ramy.webp';
@@ -124,22 +123,7 @@
 			],
 			chair_letter: `Hello there, esteemed delegates! Welcome to General Assembly 4 at IASMUN. I am Zaina Hisham, your chair for this riveting conference. As we embark on this journey together, I am thrilled to meet such a diverse and talented group of individuals. As I see it, this is more than just a conference; it's a chance for you to exchange ideas and build skills that transcend beyond school halls. I encourage each of you to engage fully and embrace this opportunity. Let's make this conference not only insightful but also enjoyable. I am looking forward to witnessing the incredible contributions I am confident you will all bring to the table!`,
 			chair_photo: GA4CHAIR,
-			chair_name: 'Zaina Hisham',
-			cochair_letter: `Dear Delegates,
-			<br /><br />
-			It is my pleasure to welcome you to the IAS MUN conference. I am Shervin Naser, your Co-Chair
-			for the General Assembly Fourth Committee. Outside the world of MUN, I find solace in the
-			melodies of the piano. Just as each key contributes to a melody, each delegate’s perspective
-			contributes to the harmony of our discussions. I look forward to insightful debates throughout
-			our time together.
-			<br /><br />
-			Best regards,
-			<br />
-			Shervin Naser
-			<br />
-			Co-Chair, GA4`,
-			cochair_photo: GA4COCHAIR,
-			cochair_name: 'Shervin Naser'
+			chair_name: 'Zaina Hisham'
 		},
 		{
 			class: 'GA5',
@@ -360,27 +344,29 @@
 					</div>
 				</div>
 
-				<div class="co-chair">
-					<h2 class="subheader">Co-Chair's Letter</h2>
-					<div class="content">
-						<Saos
-							once={true}
-							animation="slide-left-letter 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;"
-						>
-							<p>{@html committee.cochair_letter}</p>
-						</Saos>
+				{#if committee.cochair_name !== undefined}
+					<div class="co-chair">
+						<h2 class="subheader">Co-Chair's Letter</h2>
+						<div class="content">
+							<Saos
+								once={true}
+								animation="slide-left-letter 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;"
+							>
+								<p>{@html committee.cochair_letter}</p>
+							</Saos>
 
-						<Saos
-							once={true}
-							animation="slide-right-letter 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;"
-						>
-							<div class="dais">
-								<img class="img" src={committee.cochair_photo} alt={committee.cochair_name} />
-								<p class="dais-name">{committee.cochair_name}</p>
-							</div>
-						</Saos>
+							<Saos
+								once={true}
+								animation="slide-right-letter 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;"
+							>
+								<div class="dais">
+									<img class="img" src={committee.cochair_photo} alt={committee.cochair_name} />
+									<p class="dais-name">{committee.cochair_name}</p>
+								</div>
+							</Saos>
+						</div>
 					</div>
-				</div>
+				{/if}
 			</div>
 		</div>
 	{/each}
