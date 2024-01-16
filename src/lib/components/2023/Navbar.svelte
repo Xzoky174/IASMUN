@@ -34,7 +34,7 @@
 />
 
 <nav>
-	<p class="msg">You are viewing an archive</p>
+	<p class="msg">You are viewing an archive. <a class="back" href="/">Go Back</a></p>
 
 	<div class="socials">
 		{#if ready}
@@ -75,23 +75,23 @@
 			{#if ready}
 				<a
 					in:fly={showLinks ? undefined : { x: 200, duration: 1200 }}
-					class={$page.url.pathname == '/archives/2023' ? 'active' : ''}
-					href="/archives/2023">Home</a
+					class={$page.url.pathname == '/2023' ? 'active' : ''}
+					href="/2023">Home</a
 				>
 				<a
 					in:fly={showLinks ? undefined : { x: 200, duration: 1700 }}
-					class={$page.url.pathname == '/archives/2023/committees' ? 'active' : ''}
-					href="/archives/2023/committees">Committees</a
+					class={$page.url.pathname == '/2023/committees' ? 'active' : ''}
+					href="/2023/committees">Committees</a
 				>
 				<a
 					in:fly={showLinks ? undefined : { x: 200, duration: 2200 }}
-					class={$page.url.pathname == '/archives/2023/conference-schedule' ? 'active' : ''}
-					href="/archives/2023/conference-schedule">Conference Schedule</a
+					class={$page.url.pathname == '/2023/conference-schedule' ? 'active' : ''}
+					href="/2023/conference-schedule">Conference Schedule</a
 				>
 				<a
 					in:fly={showLinks ? undefined : { x: 200, duration: 2700 }}
-					class={$page.url.pathname == '/archives/2023/guidebooks' ? 'active' : ''}
-					href="/archives/2023/guidebooks">Guidebooks</a
+					class={$page.url.pathname == '/2023/guidebooks' ? 'active' : ''}
+					href="/2023/guidebooks">Guidebooks</a
 				>
 				<!-- <a
 					in:fly={showLinks ? undefined : { x: 200, duration: 3200 }}
@@ -134,6 +134,16 @@
 		top: 0;
 		left: 50%;
 		transform: translateX(-50%);
+		font-weight: 800;
+	}
+	.back {
+		text-decoration: underline;
+		color: #fff;
+		opacity: 0.8;
+		transition: 0.25s;
+	}
+	.back:hover {
+		opacity: 1;
 	}
 
 	a {

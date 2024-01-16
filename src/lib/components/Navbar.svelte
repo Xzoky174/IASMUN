@@ -25,7 +25,7 @@
 <svelte:window
 	bind:innerWidth={width}
 	on:click={(e) => {
-		if (width < 1180) {
+		if (width < 1270) {
 			if (e.target !== links && e.target !== menu) {
 				showLinks = false;
 			}
@@ -72,7 +72,7 @@
 		{/if}
 	</div>
 
-	{#if width >= 1180 || showLinks}
+	{#if width >= 1270 || showLinks}
 		<div
 			class="page-links"
 			bind:this={links}
@@ -80,51 +80,32 @@
 			out:fly={{ x: 200, duration: 800 }}
 		>
 			{#if ready}
-				<a
-					in:fly={showLinks ? undefined : { x: 200, duration: 1200 }}
-					class={$page.url.pathname == '/' ? 'active' : ''}
-					href="/">Home</a
+				<a class={$page.url.pathname == '/' ? 'active' : ''} href="/">Home</a>
+				<a class={$page.url.pathname == '/about-us' ? 'active' : ''} href="/about-us">About Us</a>
+				<a class={$page.url.pathname == '/organizers' ? 'active' : ''} href="/organizers"
+					>Organizers</a
+				>
+				<a class={$page.url.pathname == '/committees' ? 'active' : ''} href="/committees"
+					>Committees</a
+				>
+				<a class={$page.url.pathname == '/guidebooks' ? 'active' : ''} href="/guidebooks"
+					>Guidebooks</a
 				>
 				<a
-					in:fly={showLinks ? undefined : { x: 200, duration: 1700 }}
-					class={$page.url.pathname == '/about-us' ? 'active' : ''}
-					href="/about-us">About Us</a
-				>
-				<a
-					in:fly={showLinks ? undefined : { x: 200, duration: 1700 }}
-					class={$page.url.pathname == '/organizers' ? 'active' : ''}
-					href="/organizers">Organizers</a
-				>
-				<a
-					in:fly={showLinks ? undefined : { x: 200, duration: 1700 }}
-					class={$page.url.pathname == '/committees' ? 'active' : ''}
-					href="/committees">Committees</a
-				>
-				<a
-					in:fly={showLinks ? undefined : { x: 200, duration: 2700 }}
-					class={$page.url.pathname == '/guidebooks' ? 'active' : ''}
-					href="/guidebooks">Guidebooks</a
-				>
-				<a
-					in:fly={showLinks ? undefined : { x: 200, duration: 2200 }}
 					class={$page.url.pathname == '/conference-schedule' ? 'active' : ''}
 					href="/conference-schedule">Conference Schedule</a
 				>
-				<a
-					target="_blank"
-					rel="noreferrer"
-					in:fly={showLinks ? undefined : { x: 200, duration: 3200 }}
-					href="https://forms.gle/1ajf1YMnf8tvWJ7m9">Registration</a
+				<!-- <a class={$page.url.pathname == '/faq' ? 'active' : ''} href="/faq">FAQ</a> -->
+				<a class={$page.url.pathname == '/archives' ? 'active' : ''} href="/archives">Archives</a>
+				<a target="_blank" rel="noreferrer" href="https://forms.gle/1ajf1YMnf8tvWJ7m9"
+					>Registration</a
 				>
-				<a
-					in:fly={showLinks ? undefined : { x: 200, duration: 3700 }}
-					href="mailto:iasmuninfo@gmail.com">Contact Us</a
-				>
+				<a href="mailto:iasmuninfo@gmail.com">Contact Us</a>
 			{/if}
 		</div>
 	{/if}
 
-	{#if width < 1180}
+	{#if width < 1270}
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<img
 			in:fade={{ duration: 1200 }}
@@ -270,12 +251,12 @@
 		z-index: 99;
 	}
 
-	@media screen and (max-width: 1269px) {
+	@media screen and (max-width: 1365px) {
 		nav {
 			padding: 0 20px 0 20px;
 		}
 	}
-	@media screen and (max-width: 1180px) {
+	@media screen and (max-width: 1270px) {
 		.page-links {
 			position: fixed;
 			top: 0;
