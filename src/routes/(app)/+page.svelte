@@ -14,16 +14,38 @@
 	import Saos from 'saos';
 	import Countdown from '$lib/components/Countdown.svelte';
 
-	let destroyed = false;
+	import { getMs } from '$lib/functions/getMs';
+
+	let showCountdown = true;
+
+	const countdownOver = () =>
+		countdown.days === 0 &&
+		countdown.hours === 0 &&
+		countdown.minutes === 0 &&
+		countdown.seconds === 0;
+
+	let countdown = getMs();
+	if (countdownOver()) showCountdown = false;
+
 	$: if ($navigating) {
 		if ($navigating.to?.url.pathname !== '/') {
-			destroyed = true;
+			clearInterval(interval);
 		}
 	}
 
 	let ready = false;
+	let interval: number;
 
 	onMount(() => {
+		interval = setInterval(() => {
+			countdown = getMs();
+
+			if (countdownOver()) {
+				showCountdown = false;
+				clearInterval(interval);
+			}
+		}, 1000);
+
 		ready = true;
 		width = window.innerWidth;
 	});
@@ -39,10 +61,12 @@
 	<meta name="description" content="The Official Website for IASMUN 2024!" />
 </svelte:head>
 
-<div class="countdown">
-	<p>IASMUN 2024 Countdown</p>
-	<Countdown bind:destroyed />
-</div>
+{#if showCountdown}
+	<div class="countdown">
+		<p>IASMUN 2024 Countdown</p>
+		<Countdown {countdown} />
+	</div>
+{/if}
 
 <div class="intro" style={`background-image: url(${IAS}); overflow-y: hidden;`}>
 	{#if ready}
