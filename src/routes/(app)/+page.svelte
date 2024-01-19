@@ -56,7 +56,7 @@
 <svelte:window bind:innerWidth={width} />
 
 <svelte:head>
-	<title>Home</title>
+	<title>IASMUN24 Home Page</title>
 
 	<meta name="description" content="The Official Website for IASMUN 2024!" />
 </svelte:head>
