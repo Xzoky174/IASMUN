@@ -7,6 +7,12 @@
 	</div>
 </div>
 
+<svelte:head>
+	<title>Archives</title>
+
+	<meta name="description" content="Archives Of Our Website" />
+</svelte:head>
+
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
