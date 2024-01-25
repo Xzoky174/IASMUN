@@ -174,56 +174,6 @@
 			</div>
 		</div>
 	</div>
-
-	<div class="container chief-advisor">
-		<Saos once={true} animation="slide-bottom 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;">
-			<h1>Chief Advisor's<br /><span class="welcome">Welcome</span></h1>
-		</Saos>
-
-		<div class="content">
-			<div class="text">
-				<Saos once={true} animation="fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both">
-					<p>
-						Dear Respected Advisors, Guests, and Delegates,
-						<br /><br />
-						As the Chief Advisor of the IAS Model United Nations (MUN) conference, it gives me great
-						pleasure to greet each of you with a warm embrace. I am thrilled to see the combined intelligence
-						and enthusiasm that each delegate brings to the table as we set out on this exciting journey
-						of diplomacy, dialogue, and collaboration.
-						<br /><br />
-
-						Aspiring leaders have a rare opportunity to participate in productive discussions, work
-						out solutions, and create cross-border relationships through the Model UN. This
-						simulation helps them improve their diplomatic abilities while also enhancing their
-						comprehension of world affairs and the intricacies of international relations.
-						<br /><br />
-
-						I urge you to come to this conference with an open mind, a willingness to work together,
-						and a determination to discover points of agreement. Recall that each of you has a
-						significant influence on how our simulations turn out, and your participation is
-						essential to the event's success.
-						<br /><br />
-
-						Greetings once more from the Model UN conference. I hope you have a rewarding,
-						enlightening, and enriching experience.
-						<br /><br />
-
-						Sincerely,
-						<br />
-
-						Rushda Saeed
-						<br />
-
-						(Chief Advisor IAS-MUN)
-					</p>
-				</Saos>
-			</div>
-
-			<Saos once={true} animation="slide-left 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;">
-				<img src={ChiefAdvisor} alt="Chief Advisor" />
-			</Saos>
-		</div>
-	</div>
 </div>
 
 <style>
