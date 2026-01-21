@@ -4,17 +4,16 @@
 	import { base } from '$app/paths';
 
 	let committees = [
-		'GA1',
-		'GA2',
-		'GA3',
-		'UNHRC',
-		'UNFCCC',
-		'UNODC',
-		'WHO',
-		'AL (EN)',
-		'F1',
-		'UNICEF'
-	];
+	{ name: 'Arab League', file: 'Arab League 26.pdf' },
+	{ name: 'CSW', file: 'CSW 26.pdf' },
+	{ name: 'GA2', file: 'GA2 26.pdf' },
+	{ name: 'GA3', file: 'GA3 26.pdf' },
+	{ name: 'HCC', file: 'HCC 26.pdf' },
+	{ name: 'UNCF', file: 'UNCF 26.pdf' },
+	{ name: 'UNHRC', file: 'UNHRC 26.pdf' },
+	{ name: 'UNODC', file: 'UNODC 26.pdf' },
+	{ name: 'UNSC', file: 'UNSC 26.pdf' }
+];
 </script>
 
 <div class="wrapper">
@@ -27,7 +26,7 @@
 			<Saos animation="slide-top 1.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both" once={true}>
 				<a
 					class="handbook-link"
-					href="{base}/uploads/Delegate%20Handbook.pdf"
+					href="{base}/uploads/Delegate%20Handbook%2026.pdf"
 					data-sveltekit-preload-data="off">Delegate Handbook</a
 				>
 			</Saos>
@@ -39,7 +38,7 @@
 			</Saos>
 			<div class="handbook-links">
 				{#each committees as committee, index}
-					<div class={committee}>
+					<div class={committee.name}>
 						<Saos
 							once={true}
 							animation={`slide-top ${
@@ -49,9 +48,8 @@
 							<a
 								class="handbook-link"
 								data-sveltekit-preload-data="off"
-								href={`${base}/uploads/background-guides/${committee.replace(' ', '%20')}.pdf`}
-								>{committee}</a
-							>
+							href={`${base}/uploads/background-guides/${encodeURIComponent(committee.file)}`}
+>{committee.name}</a>
 						</Saos>
 					</div>
 				{/each}
